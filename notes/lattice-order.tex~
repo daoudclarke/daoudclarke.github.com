@@ -1,0 +1,18 @@
+% Bismillahi-r-Rahmani-r-Rahim
+\documentclass{article}
+\author{Daoud Clarke}
+\date{\today}
+\title{Investigations into New Lattice Orderings}
+
+
+\begin{document}
+
+\maketitle
+
+Context-theoretic semantics \cite{Clarke:07}
+
+\bibliographystyle{natbib}
+
+\bibliography{contexts}
+
+\end{document}
