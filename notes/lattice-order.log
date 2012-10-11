@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.28)  5 OCT 2012 17:11
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.28)  10 OCT 2012 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -169,49 +169,68 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 31.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+
+(./basis.tex <basis.pdf, id=1, 188.97008pt x 106.90862pt>
+File: basis.pdf Graphic file (type pdf)
+ <use basis.pdf>
+Package pdftex.def Info: basis.pdf used on input line 46.
+(pdftex.def)             Requested size: 188.26408pt x 106.50867pt.
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 67.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
- (./cones.tex
-<cones.pdf, id=1, 259.97125pt x 186.74287pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
+ (./cone.tex
+<cone.pdf, id=2, 260.31354pt x 164.64009pt>
+File: cone.pdf Graphic file (type pdf)
+ <use cone.pdf>
+Package pdftex.def Info: cone.pdf used on input line 46.
+(pdftex.def)             Requested size: 259.341pt x 164.02419pt.
+) [1
+
+{/usr/local/texlive/2011/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./cones.te
+x
+<cones.pdf, id=16, 259.97125pt x 186.74287pt>
 File: cones.pdf Graphic file (type pdf)
  <use cones.pdf>
 Package pdftex.def Info: cones.pdf used on input line 46.
 (pdftex.def)             Requested size: 259.0pt x 186.04428pt.
-) [1
-
-{/usr/local/texlive/2011/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./lattice-
-order.bbl
-[2 <./cones.pdf>]) [3] (./lattice-order.aux) ) 
+) [2 <./basis.pdf>] [3 <./cone.pdf> <./cones.pdf>] (./plane.tex
+<plane.pdf, id=53, 209.74599pt x 156.56253pt>
+File: plane.pdf Graphic file (type pdf)
+ <use plane.pdf>
+Package pdftex.def Info: plane.pdf used on input line 46.
+(pdftex.def)             Requested size: 208.96237pt x 155.984pt.
+)
+(./lattice-order.bbl [4 <./plane.pdf>]) [5] (./lattice-order.aux) ) 
 Here is how much of TeX's memory you used:
- 1910 strings out of 493610
- 26761 string characters out of 3142425
- 84682 words of memory out of 3000000
- 5211 multiletter control sequences out of 15000+200000
+ 1932 strings out of 493610
+ 27012 string characters out of 3142425
+ 86682 words of memory out of 3000000
+ 5224 multiletter control sequences out of 15000+200000
  7934 words of font info for 28 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 38i,6n,23p,239b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2011/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2011/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2011/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb>
-Output written on lattice-order.pdf (3 pages, 137517 bytes).
+ 38i,9n,23p,404b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/t
+exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
+xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
+live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
+ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texliv
+e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/20
+11/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2011/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on lattice-order.pdf (5 pages, 150594 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 139 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
