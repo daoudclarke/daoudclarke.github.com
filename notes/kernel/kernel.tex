@@ -1,0 +1,167 @@
+% Bismillahi-r-Rahmani-r-Rahim
+\documentclass{article}
+\author{Daoud Clarke}
+\date{\today}
+\title{String Kernels as Composition}
+
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[round]{natbib}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\maketitle
+
+We propose that string kernels can be viewed as a general framework
+for representing vector-based composition.
+
+\section{Motivation}
+
+The motivation for using string kernels is:
+\begin{itemize}
+\item There is an argument that natural language features such as
+  conjunction, disjunction and negation cannot easily be represented
+  within a framework in which composition is linear. Kernels provide a
+  way to explore a large range of non-linear composition methods, and
+  indeed the original motivation for their use is to make it easy to
+  work with non-linearity.
+\item There is an argument that the vector space for sentences should
+  be infinite dimensional, since information should not be lost as we
+  compose sentences. Kernels provide a way to implicitly work with
+  very high and infinite dimensional spaces while allowing for
+  efficient computation.
+\item When doing tasks such as classification, we have a need to be
+  able to evaluate the document as a whole. One way of doing this is to
+  use kernels to compare a two bags or sequences of vectors
+  (associated with individual words, phrases or sentences). Together
+  with tools such as support vector machines, we can then efficiently
+  learn a classifier for documents.
+\item We can design kernels with desirable properties for vector-based
+  composition, then examine their properties as vector spaces to give
+  us insight into what the nature of vector-based composition should
+  be. For example, if we come up with a good kernel for composing
+  sentences, we can then examine what properties the composition
+  operation has in terms of the implicitly defined vector space.
+\end{itemize}
+
+\section{Background}
+
+The theory that allows us to consider kernels as vector based
+composition is the following:
+
+\begin{definition}[Shawe-Taylor and Christianini]
+A function
+$$\kappa : X \times X \longrightarrow \mathbb{R}$$
+satisfies the finitely positive semi-definite property if it is a
+symmetric function for which the matrices formed by restriction to any
+finite subset of the space $X$ are positive semi-definite, i.e.~their
+eigenvalues are all non-negative.
+\end{definition}
+
+\begin{theorem}[Shawe-Taylor and Christianini]
+A function
+$$\kappa : X \times X \longrightarrow \mathbb{R}$$
+which is either continuous or has a countable domain, can be
+decomposed
+$$\kappa(x, y) = \langle\phi(x), \langle\phi(y)\rangle$$
+into a feature map $\phi$ into a Hilbert space $F$ applied to both its
+arguments followed by the evaluation of the inner product in $F$ if
+and only if it satisfies the finitely positive semi-definite
+property.
+\end{theorem}
+
+\section{Kernels as Composition}
+
+The general form of a model for vector-based composition is
+$$A^* \longrightarrow V \longrightarrow \langle \cdot,\cdot\rangle$$
+i.e.~we map from strings to some vector space $V$, and from that
+vector space we can then compute an inner product, for example to get
+cosine similarities.
+
+The kernel approach reverses the last part of this process:
+$$A^* \longrightarrow \langle \cdot,\cdot\rangle \longrightarrow V$$
+We map directly from strings to an inner product, and the vector space
+$V$ is determined implicitly by this inner product. This means that we
+often do not even need to explicitly represent $V$, which allows us to
+deal with all sorts of high-dimensional and infinite-dimensional
+vector spaces.
+
+\section{Examples}
+
+\subsection*{Existing Vector Composition}
+
+Any existing method of composing vectors can be used to define a
+kernel on strings, by simply composing the vectors and taking the
+resulting inner product. For some of these, it may be more
+computationally efficient to use a kernel directly.
+
+\subsection*{Tensor Product}
+
+Assume we have a mapping $\psi$ from $A$ to $V$ where $V$ is some
+vector space representing symbol meanings. The tensor product approach
+maps a string $x \in A^*$ to a vector
+$$\psi(x_1)\otimes \psi(x_2)\otimes \cdots \otimes \psi(x_n)$$
+where $x_i$ are the individual symbols in the string $x$.
+
+If we define the inner product between strings of different lengths to
+be zero, then it is easy to see that the kernel function
+$$\kappa(x,y) = \left\{
+\begin{array}{ll}
+\prod_{i}\langle \psi(x_i), \psi(y_i)\rangle & \textrm{if}\ |x| = |y|\\
+0 & \textrm{otherwise}
+\end{array}
+\right.$$
+allows us to compute the inner product between the tensor product
+vectors, without explicitly computing the vectors.
+
+It also suggests ways in which the requirement that strings have to be
+the same length to have a non-zero inner product can be relaxed - for
+example we could look at the value of the inner product for all
+substrings/subsequences of the longer string with the same length as
+the shorter string, and take the maximum over these (although we'd
+need to check that this defines a valid kernel function).
+
+\subsection*{Subsequence Kernels}
+
+These map a string to a bag of all subsequences of the string, or a bag
+of subsequences of strings under a fixed length. It is also possible
+to weight them according to the number of ``gaps'' used when forming
+the subsequence. These have been commonly used in machine learning and
+are implemented, for example, in the Weka toolkit.
+
+\subsection*{Subsequence Tensor Product}
+
+We can combine the above two ideas, and map a string of words to a sum
+of tensor products of the vector representations for all subsequences
+of the string. This gives another way to make use of the inner product
+while still allowing the comparison of strings of different length.
+
+\subsection*{Bag of Vectors}
+
+In combining a bag of vectors, we again have the situation where we
+do not want to lose information, while allowing comparison between
+bags of different sizes. One way of doing this would be to use
+something similar to the subsequence tensor product, but allow the
+vectors to be combined in any order.
+
+\section{Questions}
+
+If we want to use the context-theoretic framework idea of a vector
+lattice to compute entailments, then we need to do some extra work to
+make use of kernels. Although they give us a vector space, they don't
+give us a particular orthonormal basis on the vector space, so we
+can't define vector lattice meets and joins. In order to do so, we'd
+need to either define the vector lattice ordering directly on the
+kernel space, or define a positive cone. There is then the issue of
+how to compute values from the vectors if they are defined
+implicitly\ldots
+
+%\bibliographystyle{plainnat}
+
+%\bibliography{contexts}
+
+\end{document}
