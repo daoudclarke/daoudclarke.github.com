@@ -1,0 +1,50 @@
+% Bismillahi-r-Rahmani-r-Rahim
+\documentclass{article}
+
+\author{Daoud Clarke}
+\date{\today}
+\title{An Analysis of Logical and Vector Space Approaches to Semantics}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Current approaches to vector-based semantics take the following
+two-stage approach:
+\begin{itemize}
+\item Find vectors for terms based on their occurrences in large
+  corpora
+\item Define or learn a composition for these vectors
+\end{itemize}
+Here we propose investigating the theory behind a more holistic
+approach in which the vectors and composition are learnt
+simultaneously.
+
+This idea is inspired by looking at logical approaches to semantics
+and contrasting them with current approaches to vector-based
+semantics.
+
+\section{Approaches to Logical Semantics}
+
+There are two main approaches to logical semantics, which I shall call
+the ``theorem proving'' approach and the ``model building''
+approach. In either case I assume we have the following:
+\begin{itemize}
+\item A collection of sentences forming the \textbf{background
+  knowledge}. This may include pseudo-sentences derived from an
+  ontology, such as ``all cats are animals''.
+\item The \textbf{text} and \textbf{hypothesis} sentences
+\end{itemize}
+We want to know if the text implies the hypothesis given the
+background knowledge.
+
+In both approaches, each sentence is translated to some logical form.
+
+\subsection*{Theorem proving approach}
+
+In this approach, 
+
+\end{document}

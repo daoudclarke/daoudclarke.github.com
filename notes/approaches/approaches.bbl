@@ -1,0 +1,29 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bos and Markert(2006)]{Bos:06}
+Johan Bos and Katja Markert.
+\newblock When logical inference helps determining textual entailment (and when
+  it {doesn't}).
+\newblock In \emph{Proceedings of the Second PASCAL Challenges Workshop on
+  Recognising Textual Entailment}, 2006.
+
+\bibitem[Clark et~al.(2008)Clark, Coecke, and Sadrzadeh]{Clark:08}
+Stephen Clark, Bob Coecke, and Mehrnoosh Sadrzadeh.
+\newblock A compositional distributional model of meaning.
+\newblock In \emph{Proceedings of the Second Quantum Interaction Symposium
+  (QI-2008)}, pages 133--140, Oxford, UK, 2008.
+
+\bibitem[Glickman and Dagan(2005)]{Glickman:05}
+O.~Glickman and I.~Dagan.
+\newblock A probabilistic setting and lexical cooccurrence model for textual
+  entailment.
+\newblock In \emph{Proceedings of the ACL Workshop on Empirical Modeling of
+  Semantic Equivalence and Entailment}, pages 43--48. Association for
+  Computational Linguistics, 2005.
+
+\end{thebibliography}
