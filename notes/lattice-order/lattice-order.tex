@@ -158,6 +158,37 @@ projected onto $\hat{p}$. Any vectors on the plane perpendicular to a
 point on $\hat{p}$ are equivalent under this partial ordering (thus it
 is not strictly a partial ordering).
 
+\section{Relating Strings of Different Lengths with Orderings}
+
+We can use vector space orderings to relate strings of different
+lengths. This is similar to the quotient algebra construction of
+\cite{Clarke:10}, but allows us to specify the asymmetric relation of
+entailment, instead of equating vectors. In fact the two techniques
+complement one another: if we need to impose equality between vectors
+we can use the quotient algebra construction, and if we need to relate
+two vectors by entailment then we can change the ordering.
+
+For example, if we wish to impose the conjunctive nature of ``and'' on
+the vector space, we can do this by requiring that $uav \le u$ and
+$uav \le v$ for all $u$ and $v$ where $a$ is the vector for
+``and''. We can do the same for ``or'' with $u \le uov$ and $v\le uov$
+where $o$ is the vector for ``or''.
+
+Similarly, we can make all adjectives restrict the properties of the
+nouns they operate on by making $au \le u$ for all adjective vectors
+$a$ and all noun space vectors $u$.
+
+This also gives us a surprising answer for what the sentence space
+should look like: it doesn't really matter, as long as the ordering
+between sentences can be specified correctly. For example, we can just
+use the tensor product between sentences but ensure that $s_1s_2 \le
+s_1$ and $s_1s_2\le s_2$.
+
+In a sense, this is like imposing a logic on top of the vector space
+structure, where the rules of the logic are encapsulated in the
+positive cone.
+
+
 \bibliographystyle{plainnat}
 
 \bibliography{contexts}
