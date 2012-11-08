@@ -6,6 +6,7 @@
 
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage{amssymb}
 \usepackage[round]{natbib}
 
 \newtheorem{definition}{Definition}
@@ -178,15 +179,48 @@ Similarly, we can make all adjectives restrict the properties of the
 nouns they operate on by making $au \le u$ for all adjective vectors
 $a$ and all noun space vectors $u$.
 
-This also gives us a surprising answer for what the sentence space
-should look like: it doesn't really matter, as long as the ordering
-between sentences can be specified correctly. For example, we can just
-use the tensor product between sentences but ensure that $s_1s_2 \le
-s_1$ and $s_1s_2\le s_2$.
-
 In a sense, this is like imposing a logic on top of the vector space
 structure, where the rules of the logic are encapsulated in the
 positive cone.
+
+\subsection{Application to Sentence Space}
+
+This also gives us a surprising answer for what the sentence space
+should look like: it doesn't really matter, as long as the ordering
+between sentences can be specified correctly. For example, we can just
+use the tensor product between sentences but ensure that $s_1\otimes s_2 \le
+s_1$ and $s_1\otimes s_2\le s_2$.
+
+Let $V$ be a fixed dimensional space used to represent the meaning of
+a single sentence, then we use
+$$T(V) = \mathbb{R}\oplus V \oplus (V\otimes V) \oplus (V\otimes V\otimes V) \oplus \cdots$$
+to represent multiple sentences. Given a partial ordering $\le$ on
+$V$, there is a natural extension to an ordering on $T(V)$, for
+example $u_1\otimes v_1 \le u_2\otimes v_2$ iff $u_1 \le u_2$ and
+$v_1 \le v_2$, and similarly for higher tensor powers.
+
+We also assume that $V$ has a preferred basis that defines a natural
+lattice ordering, by $u_1 \le u_2$ if every component of $u_1$ is less
+than or equal to the corresponding component of $u_2$.
+
+Let $C$ be the positive cone on $T(V)$ as defined above, i.e.~the set
+of all vectors $u\in T(V)$ such that $u \ge 0$. Under the standard
+ordering, strings of different lengths are not related, so we add
+additional vectors to $C$ to relate them. Let
+$$C' = C \cup \{ u - u\otimes v : u,v \in C \}$$
+This defines a cone which behaves as the normal ordering for strings
+of the same length, but allows strings of different lengths to be
+related.
+
+Questions:
+\begin{itemize}
+\item Does $C'$ define a lattice ordering, or is it merely a partial
+  ordering? This is important if we want to compute a
+  context-theoretic degree of entailment, $\|u\land v\|/\|v\|$ between
+  vectors.
+\item How can we compute $u\land v$ given arbitrary vectors $u$ and
+  $v$?
+\end{itemize}
 
 
 \bibliographystyle{plainnat}
