@@ -160,6 +160,42 @@ kernel space, or define a positive cone. There is then the issue of
 how to compute values from the vectors if they are defined
 implicitly\ldots
 
+\section{Lattice Orderings and Kernels}
+
+If we are going to use kernels to do composition there is the question
+of how to define entailment between strings. Context-theoretic
+semantics suggests that the correct way to do this is with a lattice
+ordering on a vector space. Although most vector spaces come equipped
+with a natural ordering defined by an associated orthonormal basis, in
+the case of the vector space defined implicitly by the kernel, there
+is no such basis and thus no natural ordering. The alternative is to
+specify an ordering along with the kernel. This allows for a lot of
+flexibility in expressing how meanings are related.
+
+One simple way of defining a valid vector space ordering is to choose
+a set of elements that generate a positive cone. For example, if we
+choose $u - v$ to be positive, then $0 \le u - v$ or $v \le
+u$. Counterintuitively, it is possible to relate two vectors to one
+another in this way, even if they are orthogonal. This may mean that
+the actual definition of composition may be less important than the
+definition of positive cone: we can use a definition of composition
+that makes many things orthogonal, such as the tensor product, and
+then relate them using a positive cone.
+
+For example, if we wish to impose the conjunctive nature of ``and'' on
+the vector space, we can do this by requiring that $uav \le u$ and
+$uav \le v$ for all $u$ and $v$ where $a$ is the vector for
+``and''. We can do the same for ``or'' with $u \le uov$ and $v\le uov$
+where $o$ is the vector for ``or''.
+
+Similarly, we can make all adjectives restrict the properties of the
+nouns they operate on by making $au \le u$ for all adjective vectors
+$a$ and all noun space vectors $u$.
+
+In a sense, this is like imposing a logic on top of the vector space
+structure, where the rules of the logic are encapsulated in the
+positive cone.
+
 %\bibliographystyle{plainnat}
 
 %\bibliography{contexts}
