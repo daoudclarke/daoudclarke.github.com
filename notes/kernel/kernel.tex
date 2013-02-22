@@ -92,14 +92,14 @@ vector spaces.
 
 \section{Examples}
 
-\subsection*{Existing Vector Composition}
+\subsection{Existing Vector Composition}
 
 Any existing method of composing vectors can be used to define a
 kernel on strings, by simply composing the vectors and taking the
 resulting inner product. For some of these, it may be more
 computationally efficient to use a kernel directly.
 
-\subsection*{Tensor Product}
+\subsection{Tensor Product}
 
 Assume we have a mapping $\psi$ from $A$ to $V$ where $V$ is some
 vector space representing symbol meanings. The tensor product approach
@@ -125,7 +125,7 @@ substrings/subsequences of the longer string with the same length as
 the shorter string, and take the maximum over these (although we'd
 need to check that this defines a valid kernel function).
 
-\subsection*{Subsequence Kernels}
+\subsection{Subsequence Kernels}
 
 These map a string to a bag of all subsequences of the string, or a bag
 of subsequences of strings under a fixed length. It is also possible
@@ -133,20 +133,81 @@ to weight them according to the number of ``gaps'' used when forming
 the subsequence. These have been commonly used in machine learning and
 are implemented, for example, in the Weka toolkit.
 
-\subsection*{Subsequence Tensor Product}
+\subsection{Subsequence Tensor Product}
 
 We can combine the above two ideas, and map a string of words to a sum
 of tensor products of the vector representations for all subsequences
 of the string. This gives another way to make use of the inner product
 while still allowing the comparison of strings of different length.
 
-\subsection*{Bag of Vectors}
+\subsection{Bag of Vectors}
 
 In combining a bag of vectors, we again have the situation where we
 do not want to lose information, while allowing comparison between
 bags of different sizes. One way of doing this would be to use
 something similar to the subsequence tensor product, but allow the
 vectors to be combined in any order.
+
+There is some research on this problem, mainly in the area of image
+analysis. Most of this revolves around estimating the probability
+distribution of vectors within the space (which is very similar to
+some of Miro's suggestions?). \citet{kondor2003kernel} attempts to
+do this directly by fitting a Gaussian distribution and then using the
+Bhattacharyya measure as an inner product between these distributions:
+$$K(p,p') = \int \sqrt{p(x)}\sqrt{p'(x)}dx$$
+
+\citet{desobry2005class} attempts to avoid the problem with data
+sparseness in estimating the probability distribution by computing
+probability distribution ``level sets'', subsets of the vector space
+which correspond to areas where it is estimated that most of the data
+lies. They then define kernels in terms of how similar these sets
+are.
+
+\citet{grauman2005pyramid} attempt to solve the same problem by
+estimating the similarity between probability distributions using
+histograms over the vector space.
+
+Variations on these techniques may be applicable to our situation, but
+it is possible that high dimensionality, combined with potentially
+small numbers of vectors (e.g.~for sentences) may mean that it is not
+feasible to attempt to estimate probability distributions.
+
+There are some other potential methods derived from kernels presented
+in \citet{shawe2004kernel}. An obvious one is simply to combine the
+individual vectors to a single vector using one of the standard
+``composition'' approaches:
+\begin{itemize}
+\item addition: this can be done even if the vectors are defined
+  implicity using kernels
+\item component-wise multiplication
+\item component-wise maximum/minimum
+\end{itemize}
+The kernel is then defined as the inner product on the composed
+vectors (though, other than addition using underlying kernels, we are
+not getting any benefit from kernels in this approach).
+
+The all-subsets kernel allows the efficient computation of a
+similarity based on all possible subsets of the set of features that
+make up the vector space. It is defined as
+$$\kappa_\subseteq(\mathbf{x}, \mathbf{z}) = \prod_{i=1}^n (1+x_iz_i)$$
+There is potential to adapt this to our situation by considering the
+``features'' to actually be the set of vectors under consideration;
+this would give us a fast way to compare all possible subsets of the
+vectors with one another.
+
+Another line of investigation is to use locality sensitive hashing to
+allow the comparison of sets of vectors. Let $h_n(\mathbf{v})$ be the
+first $n$ binary digits of an $N$ digit hash function applied to
+vector $\mathbf{v}$. For a set of vectors $\mathbf{v_i}$, we define a
+vector
+$$\sum_{i,n} 2^{N-n} h_n(\mathbf{v_i})$$
+in the space with a different binary string for each dimension.
+
+%  This is arguably not so relevant to our situation as there
+% are often many vectors that need to be compared, and the work revolves
+% around reducing the computational complexity that arises in this
+% situation, whereas we will
+
 
 \section{Questions}
 
@@ -161,8 +222,8 @@ how to compute values from the vectors if they are defined
 implicitly\ldots
 
 
-%\bibliographystyle{plainnat}
+\bibliographystyle{plainnat}
 
-%\bibliography{contexts}
+\bibliography{kernel}
 
 \end{document}

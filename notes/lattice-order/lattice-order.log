@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.13)  15 NOV 2012 09:27
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.12.4)  6 DEC 2012 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -211,7 +211,7 @@ Package pdftex.def Info: plane.pdf used on input line 46.
 [4 <./plane.pdf>] [5] (./lattice-order.bbl) [6] (./lattice-order.aux) ) 
 Here is how much of TeX's memory you used:
  2234 strings out of 495059
- 30052 string characters out of 3182029
+ 30052 string characters out of 3182030
  86053 words of memory out of 3000000
  5379 multiletter control sequences out of 15000+200000
  11849 words of font info for 46 fonts, out of 3000000 for 9000
@@ -230,7 +230,7 @@ m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lattice-order.pdf (6 pages, 164121 bytes).
+Output written on lattice-order.pdf (6 pages, 163772 bytes).
 PDF statistics:
  146 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
