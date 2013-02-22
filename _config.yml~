@@ -1,0 +1,12 @@
+title: My blog
+#url: http://www.mydomain.com
+
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:day/:title
+
+lsi: true
+paginate: 20
+
+exclude:
+- CNAME
