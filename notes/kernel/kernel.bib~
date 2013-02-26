@@ -1,0 +1,10 @@
+@inproceedings{kondor2003kernel,
+  title={A kernel between sets of vectors},
+  author={Kondor, Risi and Jebara, Tony},
+  booktitle={MACHINE LEARNING-INTERNATIONAL WORKSHOP THEN CONFERENCE-},
+  volume={20},
+  number={1},
+  pages={361},
+  year={2003}
+}
+
