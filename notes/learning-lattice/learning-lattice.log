@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.13)  30 NOV 2012 18:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.12.4)  21 DEC 2012 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lattice-order.tex
-(./lattice-order.tex
+**learning-lattice.tex
+(./learning-lattice.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
 aded.
@@ -84,21 +84,21 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 \c@definition=\count89
 
-(./lattice-order.aux)
-\openout1 = `lattice-order.aux'.
+(./learning-lattice.aux)
+\openout1 = `learning-lattice.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -161,89 +161,55 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 18.
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 18.
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) (./basis.tex
-<basis.pdf, id=1, 188.97008pt x 106.90862pt>
-File: basis.pdf Graphic file (type pdf)
- <use basis.pdf>
-Package pdftex.def Info: basis.pdf used on input line 46.
-(pdftex.def)             Requested size: 188.26408pt x 106.50867pt.
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 70.
+<first_plane.pdf, id=1, 578.16pt x 433.62pt>
+File: first_plane.pdf Graphic file (type pdf)
+ <use first_plane.pdf>
+Package pdftex.def Info: first_plane.pdf used on input line 35.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 70.
- (./cone.tex
-<cone.pdf, id=2, 260.31354pt x 164.64009pt>
-File: cone.pdf Graphic file (type pdf)
- <use cone.pdf>
-Package pdftex.def Info: cone.pdf used on input line 46.
-(pdftex.def)             Requested size: 259.341pt x 164.02419pt.
-) [1
+<second_plane.pdf, id=2, 578.16pt x 433.62pt>
+File: second_plane.pdf Graphic file (type pdf)
+ <use second_plane.pdf>
+Package pdftex.def Info: second_plane.pdf used on input line 47.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./cones.tex
-<cones.pdf, id=16, 259.97125pt x 186.74287pt>
-File: cones.pdf Graphic file (type pdf)
- <use cones.pdf>
-Package pdftex.def Info: cones.pdf used on input line 46.
-(pdftex.def)             Requested size: 259.0pt x 186.04428pt.
-) [2 <./basis.pdf>] [3 <./cone.pdf> <./cones.pdf
+No file learning-lattice.bbl.
+[1
 
-pdfTeX warning: pdflatex (file ./cones.pdf): PDF inclusion: multiple pdfs with 
-page group included in a single page
->] (./plane.tex <plane.pdf, id=53, 209.74599pt x 156.56253pt>
-File: plane.pdf Graphic file (type pdf)
- <use plane.pdf>
-Package pdftex.def Info: plane.pdf used on input line 46.
-(pdftex.def)             Requested size: 208.96237pt x 155.984pt.
-)
-[4 <./plane.pdf>] [5]
-Overfull \hbox (116.50093pt too wide) in paragraph at lines 247--259
-[][] 
- []
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./first_plane.pdf> <./
+second_plane.pdf
 
-
-Overfull \hbox (122.88982pt too wide) in paragraph at lines 262--274
-[][] 
- []
-
-(./lattice-order.bbl [6]) [7] (./lattice-order.aux) ) 
+pdfTeX warning: pdflatex (file ./second_plane.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+>] (./learning-lattice.aux) ) 
 Here is how much of TeX's memory you used:
- 2234 strings out of 495059
- 30052 string characters out of 3182029
- 92059 words of memory out of 3000000
- 5379 multiletter control sequences out of 15000+200000
- 11849 words of font info for 46 fonts, out of 3000000 for 9000
+ 2180 strings out of 495059
+ 29397 string characters out of 3182030
+ 83934 words of memory out of 3000000
+ 5341 multiletter control sequences out of 15000+200000
+ 11503 words of font info for 45 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,24p,404b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lattice-order.pdf (7 pages, 167889 bytes).
+ 38i,7n,24p,242b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on learning-lattice.pdf (2 pages, 101597 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 66 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
