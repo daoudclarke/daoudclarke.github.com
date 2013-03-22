@@ -1,0 +1,116 @@
+% Bismillahi-r-Rahmani-r-Rahim
+\documentclass{article}
+
+\usepackage[round]{natbib}
+
+\author{Daoud Clarke}
+\date{\today}
+\title{An Analysis of Logical and Vector Space Approaches to Semantics}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Current approaches to vector-based semantics take the following
+two-stage approach:
+\begin{itemize}
+\item Find vectors for terms based on their occurrences in large
+  corpora
+\item Define or learn a composition for these vectors
+\end{itemize}
+Here we propose investigating the theory behind a more holistic
+approach in which the vectors and composition are learnt
+simultaneously.
+
+This idea is inspired by looking at logical approaches to semantics
+and contrasting them with current approaches to vector-based
+semantics.
+
+\section{Approaches to Logical Semantics}
+
+There are two main approaches to logical semantics, which I shall call
+the ``theorem proving'' approach and the ``model building''
+approach. In either case I assume we have the following:
+\begin{itemize}
+\item A collection of sentences forming the \textbf{background
+  knowledge}. This may include pseudo-sentences derived from an
+  ontology, such as ``all cats are animals''.
+\item The \textbf{text} and \textbf{hypothesis} sentences
+\end{itemize}
+One question we may ask is whether the text implies the hypothesis
+given the background knowledge. Other questions we may be interested
+in is whether the text and hypothesis are paraphrases (logically
+equivalent), or contradictory given the background knowledge.
+
+In both approaches, each sentence is translated to some logical
+form. The background knowledge is represented by the logical form $B$,
+the logical form of the text by $T$, and the logical form of the
+hypothesis by $H$.
+
+\subsection*{Theorem proving approach}
+
+In this approach, to determine entailment we simply see if we can
+prove $B\land T \rightarrow H$ using a theorem prover. Normally, we
+would simultaneously trying to build a model for $\lnot(B\land T
+\rightarrow H)$; if we do find a model then we know we can give up
+trying to prove the theorem.
+
+The other tasks can be attacked similarly, for example the text is
+inconsistent with the hypothesis given the background knowledge if we
+can prove that $B\land T \rightarrow \lnot H$.
+
+\subsection*{Model building approach}
+
+There are several ways we can use model builders with natural language
+semantics, but the basic idea is that given some knowledge, we can
+build a model of the world that is representative of that
+knowledge. We then query the model to determine what is true.
+
+Under this approach, the model that is built is only required to be
+consistent, so any assumptions can be made building the model as long
+as these are not inconsistent with the knowledge that is
+presented. This allows for a much more flexible approach than the
+theorem proving approach.
+
+A simple way you might use a model builder to determine entailment is
+to build a model for $B\land T$ and see if $H$ is true in that
+model.\footnote{The problem with this approach is that any additional
+assumptions we make in building the model could potentially make $H$
+arbitrarily true or false. There are ways to work around this that are
+not relevant to the discussion --- see \cite{Bos:06}.}
+
+\section{Analogies with Vector Space Approaches}
+
+The approach of \cite{Clark:08} is most closely related to the model
+building approach of logical semantics. The ``model'' is the
+representation of the words as linear operators. Combining these
+operators for a sentence results in a ``truth value'' just as when you
+have a logical model, you can get a truth value for any sentence.
+
+This analogy suggests new ways we can use use Clark et al's
+approach. For example, we can build a model using the background
+knowledge (a text corpus) and evaluate the degree to which the
+hypothesis is true in the model, then a build a model using the
+background model and the text sentence and evaluate the degree to
+which the hypothesis is true with respect to the new model. Following
+\cite{Glickman:05}, we can view entailment as holding if the degree to
+which the hypothesis is true is greater when the text is included
+along with the background knowledge.
+
+It also suggests that the approach of learning vectors and then
+learning how to compose them is sub-optimal. What we should really be
+doing is learning vectors and composition together such that when we
+compose sentences from the background knowledge we get a high value,
+and other sentences (or non-sentences) give us a low value.
+
+
+
+
+\bibliographystyle{plainnat}
+
+\bibliography{contexts}
+
+\end{document}

@@ -1,0 +1,17 @@
+Bismillahi-r-Rahmani-r-Rahim
+
+Positive cone in 3D is defined by following equations:
+
+C = {x : x = au + bv + cw}
+
+where a,b,c >= 0 and u,v,w are vectors.
+
+Half space is described by:
+
+S = {x : x.u > 0}
+
+For some vector u.
+
+But a cone is an intersection of half spaces...
+
+C = {x : x.u > 0 and x.v > 0 and x.w > 0} 

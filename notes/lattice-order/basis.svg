@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="basis.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3876"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3784">
+      <rect
+         style="fill:#000000;fill-opacity:0.24545456;stroke:none"
+         id="rect3786"
+         width="250.97974"
+         height="165.04066"
+         x="237.38585"
+         y="358.00159" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.3751304"
+     inkscape:cx="249.53578"
+     inkscape:cy="577.54667"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-global="true"
+     inkscape:object-paths="true"
+     inkscape:snap-bbox="false"
+     inkscape:object-nodes="true"
+     inkscape:window-width="1024"
+     inkscape:window-height="523"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-nodes="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 154.55334,320.00159 0,203.04066 323.24881,0"
+       id="path2985"
+       inkscape:connector-curvature="0"
+       mask="none"
+       clip-path="none" />
+    <rect
+       style="fill:#000000;fill-opacity:0.33181819000000001;stroke:#000000;stroke-opacity:1"
+       id="rect4424"
+       width="250.04045"
+       height="197.20451"
+       x="209.85538"
+       y="257.59076" />
+    <rect
+       style="fill:#000000;fill-opacity:0.33181817;stroke:#000000;stroke-opacity:1;display:inline"
+       id="rect4424-6"
+       width="250.04045"
+       height="197.20451"
+       x="260.55521"
+       y="307.35709" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="path4444"
+       sodipodi:cx="210.97162"
+       sodipodi:cy="458.88821"
+       sodipodi:rx="5.5812597"
+       sodipodi:ry="5.5812597"
+       d="m 216.55288,458.88821 a 5.5812597,5.5812597 0 1 1 -11.16252,0 5.5812597,5.5812597 0 1 1 11.16252,0 z"
+       transform="matrix(0.44792755,0,0,0.44792755,115.31463,249.02425)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:none;display:inline"
+       id="path4444-4"
+       sodipodi:cx="210.97162"
+       sodipodi:cy="458.88821"
+       sodipodi:rx="5.5812597"
+       sodipodi:ry="5.5812597"
+       d="m 216.55288,458.88821 a 5.5812597,5.5812597 0 1 1 -11.16252,0 5.5812597,5.5812597 0 1 1 11.16252,0 z"
+       transform="matrix(0.44792755,0,0,0.44792755,166.1913,298.91924)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="274.67966"
+       y="513.52698"
+       id="text4464"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4466"
+         x="274.67966"
+         y="513.52698">$u$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="201.74455"
+       y="453.12018"
+       id="text4468"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4470"
+         x="201.74455"
+         y="453.12018">$v$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="266.36517"
+       y="466.16843"
+       id="text4472"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4474"
+         x="266.36517"
+         y="466.16843">$u\lor v$</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:none;display:inline"
+       id="path4444-4-8"
+       sodipodi:cx="210.97162"
+       sodipodi:cy="458.88821"
+       sodipodi:rx="5.5812597"
+       sodipodi:ry="5.5812597"
+       d="m 216.55288,458.88821 a 5.5812597,5.5812597 0 1 1 -11.16252,0 5.5812597,5.5812597 0 1 1 11.16252,0 z"
+       transform="matrix(0.44792755,0,0,0.44792755,165.94017,249.3556)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="working"
+     style="display:inline" />
+</svg>
