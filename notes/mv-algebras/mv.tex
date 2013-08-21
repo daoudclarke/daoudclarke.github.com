@@ -1,0 +1,132 @@
+% Bismillahi-r-Rahmani-r-Rahim
+\documentclass{article}
+
+
+\author{Daoud Clarke}
+\date{\today}
+\title{Applying Cone Learning to Compositionality}
+
+
+\begin{document}
+
+\maketitle
+
+This document outlines potential strategies for applying the work on
+learning entailment relations to compositionality.
+
+\section{Kernel-based Approaches}
+
+In these approaches, we implicitly define a vector space on strings of
+words using a kernel. We can then use recognising textual entailment
+datasets to learn an ordering on this space.
+
+Benefits of this approach:
+\begin{itemize}
+\item Simple to implement
+\item Very general model of composition
+\end{itemize}
+Downsides to the approach:
+\begin{itemize}
+\item Finding a kernel that works well given the size of the training
+  set may be non-trivial
+\item Not very linguistically motivated
+\item Requires learning an ordering on the space associated with
+  strings. This is a much bigger space than the space associated with
+  words, so is potentially a much harder problem.
+\end{itemize}
+
+\section{Grammarless Composition}
+
+In this approach, we determine a partial ordering on the space
+$(V\otimes V)\oplus V$ which relates pairs of words to words, where
+$V$ is the vector space of words. We do this by examining contexts of
+all words and pairs of words, and then ensuring that for every pair
+$a,b$ of words, that $\hat{a}\otimes \hat{b} \le \widehat{ab}$, where
+$\hat{a}$ is the context vector associated with $a$. We would likely
+use window-based features rather than dependencies for this approach.
+
+We then use this to induce a partial ordering on the Fock space $F(V)$
+by requiring that $\mathbf{u} \le \mathbf{v}$ implies that
+$\mathbf{w}\otimes \mathbf{u} \le \mathbf{w}\otimes\mathbf{v}$ and 
+$\mathbf{u}\otimes \mathbf{w} \le \mathbf{v}\otimes\mathbf{w}$. This
+gives us an order on all strings.
+
+Benefits:
+\begin{itemize}
+\item Potentially simple to implement
+\item Learn word ordering on a small(er) space
+\end{itemize}
+Downsides:
+\begin{itemize}
+\item Not linguistically motivated
+\item How do we resolve conflicts in orderings when comparing long strings?
+\end{itemize}
+
+\section{Grammar-based Composition}
+
+In this approach we assume we always have a parse for the two sentences we
+are comparing, and we learn orderings from a treebank. We need to
+learn an ordering for every pair of types that can compose. For
+example, we need an ordering for $(V\otimes\mathit{NP})\oplus
+V\oplus\mathit{NP}$ where $V$ and $\mathit{NP}$ are the spaces for
+verbs and noun phrases respectively. The tensor product of these
+spaces is thus the space for verb phrases, and the ordering tells us
+how verb phrases relate to the orderings of verbs and noun
+phrases. Given parses for sentences, we can recursively apply these
+orderings to compare them.
+
+Benefits:
+\begin{itemize}
+\item More linguistically motivated
+\end{itemize}
+Downsides:
+\begin{itemize}
+\item Fairly complex to implement
+\item Perhaps less robust as requires getting the parse correct
+\end{itemize}
+
+\section{Adapting Boolean Semantics to MV Algebras}
+
+The Boolean semantics of Keenan and Faltz abstracts Montague semantics
+to allow the conjunction and disjunction of any constituent to be
+described elegantly, since every constituent is represented as a
+Boolean algebra.
+
+MV algebras are a generalisation of Boolean algebras and provide the
+semantics for Lukasiewicz logic, an infinite valued logic. There is a
+close relationship between MV algebras and Riesz spaces since every MV
+algebra can be embedded in a Riesz-MV algebra.
+
+An MV algebra has operations satisfying:
+\begin{itemize}
+\item $(x \oplus y) \oplus z = x \oplus (y \oplus z),$
+\item $x \oplus 0 = x,$
+\item $x \oplus y = y \oplus x,$
+\item $\lnot \lnot x = x,$
+\item $x \oplus \lnot 0 = \lnot 0$, and
+\item $\lnot ( \lnot x \oplus y)\oplus y = \lnot ( \lnot y \oplus x)\oplus x.$
+\end{itemize}
+We can then define the familiar operators $\lor$ and $\land$ as
+\begin{itemize}
+\item $x\lor y = x\oplus \lnot(x\oplus\lnot y)$
+\item $x\land y = \lnot (\lnot x \lor \lnot y)$
+\end{itemize}
+
+The prototypical example of an MV algebra is the interval $[0,1]$
+together with operations $x \oplus y = \min(x+y, 1)$ and $\lnot x = 1
+- x$, however this can easily be generalised to multidimensional
+spaces $[0,1]^n$, in which $\lor$ and $\land$ correspond to the
+component-wise vector lattice operations.
+
+Thus we can adapt our learning technique to give us vectors which can
+be considered as elements of an MV algebra simply by ensuring that
+they are positive, and normalising them so that every component is
+between 0 and 1. This can be done since each component can be
+normalised independently without affecting the ordering.
+
+We can then use the standard semantics of Keenan and Faltz, but with
+MV algebras instead of Boolean algebras. I think it is likely that all
+the properties of Boolean algebras that they use are present in MV
+algebras, but we would need to confirm this.
+
+\end{document}

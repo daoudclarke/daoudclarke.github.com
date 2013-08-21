@@ -1,0 +1,78 @@
+% Bismillahi-r-Rahmani-r-Rahim
+\documentclass{article}
+
+\title{Approximate Entailment}
+
+\author{Daoud Clarke}
+
+\date{\today}
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+We have been treating the hyponymy relation given by WordNet as a
+partial ordering on the vector space of contexts, however this is not
+consistent if we take into account synonyms, if we treat them as
+satisfying $u \le v$ and $v\le u$, where $u$ and $v$ are the context
+vectors of two terms, which is only possible if $u = v$. This can be
+satisfied either by constructing a quotient space to make the vectors
+equal, or by relaxing the constraints on the relationship $\le$. Here
+we consider the latter option.
+
+\begin{figure}
+\def\svgwidth{5cm}
+\centering
+\input{approx-cone.pdf_tex}
+\caption{The set of points $u\gtrsim 0$ are those such that $u\ge-\delta$.}
+\end{figure}
+
+
+\begin{figure}
+\def\svgwidth{5cm}
+\centering
+\input{synonym.pdf_tex}
+\caption{Approximate synonym vectors $u$ and $v$ satisfy $|u - v| \le \delta$ (the
+  darker shaded region).}
+\end{figure}
+
+Given a partially ordered vector space $V$ and a vector $\delta \in
+V$, we define a new relation $\lesssim$ on $V$ by $u \lesssim v$ if
+and only if $u \le v + \delta$. We can then define a relation $\simeq$
+by $u \simeq v$ if and only if $u\lesssim v$ and $v \lesssim u$; its
+interpretation is that the terms associated with $u$ and $v$ are
+approximately synonymous. Note that this is only possible if $\delta
+\ge 0$, since $u \le v + \delta \le u + 2\delta$.
+
+\section{Learning Approximate Relations}
+
+If we assume this more general situation, we now have the problem of
+learning not just the ordering $\le$, but also the vector
+$\delta$.
+
+One option is to assume that $u \lesssim v$ means there exists a
+$\delta_{uv}$ such that $u \le v + \delta_{uv}$ and
+$\|\delta_{uv}\|_2\le \epsilon$ for some fixed $\epsilon$. This leads
+to an overall value of $\delta =
+(\epsilon,\epsilon,\ldots,\epsilon)$. In this construction, we have to
+learn a single parameter $\epsilon$, which acts in a similar manner to
+the bias in support vector machines.
+
+Another option is to try and learn $\le$ and $\delta$ simultaneously
+using support vector machines. Let $p_i$ be a set of hyperplanes and
+$b_i$ a set of associated biases, which together define a set of
+half-spaces $S_i$, by $u\in S_i$ if and only if $p_i\cdot u \ge
+b_i$. If the $p_i$ are linearly independent, then the intersection of
+these half-spaces forms a displaced cone: let $M$ be the matrix with
+$p_i$ as rows, and $\delta$ the vector with $b_i$ as elements, then
+$u$ is in the intersection of half spaces if $Mu \ge \delta$.
+
+
+
+\end{document}

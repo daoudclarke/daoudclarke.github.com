@@ -1,0 +1,15 @@
+
+<div class="row-fluid jumbotron">
+  <div id="mc_embed_signup" class="signup">
+    <form class="form-inline" action="http://github.us6.list-manage.com/subscribe/post?u=3fe77eb5fe&amp;id=8a59f91b7a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+      <input type="email" value="" name="EMAIL" placeholder="Email" class="required email" id="mce-EMAIL"/>
+      <input type="text" value="" name="FNAME" placeholder="First name" class="" id="mce-FNAME"/>
+      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-success"/>
+    </form>
+    <p><i>You will receive a link to your free guide on subscription. We promise we will not give away or sell your details; you can unsubscribe at any time.</i></p>
+  </div>
+  <div class="thanks" style="display:none">
+    <p><i>Thanks for signing up. We've sent you a link to your free guide.</i></p>
+    <p><i> If you like this, please consider upvoting on <a href="http://news.ycombinator.com/item?id=5344182">Hacker News.</a></i></p>
+  </div>
+</div>
