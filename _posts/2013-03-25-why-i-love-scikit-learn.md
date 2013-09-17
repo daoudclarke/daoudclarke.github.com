@@ -37,8 +37,9 @@ The importance of a clean API cannot be overstated. It is much easier
 to write clean code if the underlying API is cleanly designed. Your
 code will have to conform to the vision of the library writer, and
 they can force you to write convoluted code if they want to. Complex
-design may sometimes be justified by increased generality, but if the
-common use cases are difficult, then it is not a good design.
+design may sometimes be justified by increased generality, but if it
+is hard to implement the common use cases, then the API is poorly
+designed.
 
 The objects provided by the library are forced upon you, and they will
 litter your code. Well designed objects will lead to terse, readable
@@ -47,12 +48,13 @@ six months down the line trying to remember how the code you wrote
 works.
 
 You may be tempted to take a machine learning library that has a poor
-API but more algorithms and wrap it in a clean API but beware!
+API but more algorithms and wrap it in a clean API, but beware!
 Creating a good wrapper for a library is no mean feat. Doing machine
 learning properly requires a variety of tools that will need to be
-wrapped, and you may find that it's not worth the overhead. In
-addition, a library with a poor API is likely to be lacking in other
-important qualities such as robustness and good documentation.
+wrapped, and you may find that it's not worth the overhead (I learnt
+this lesson the hard way). In addition, a library with a poor API is
+likely to be lacking in other important qualities such as robustness
+and good documentation.
 
 ## 2. Robust
 
@@ -102,6 +104,19 @@ determines which objects are appropriate in each circumstance. For
 example, classifiers are expected to implement the `fit` and `predict`
 methods. 
 
+Here's an example from the documentation for the Multinomial Naive
+Bayes classifier:
+
+    >>> import numpy as np
+    >>> X = np.random.randint(5, size=(6, 100))
+    >>> Y = np.array([1, 2, 3, 4, 5, 6])
+    >>> from sklearn.naive_bayes import MultinomialNB
+    >>> clf = MultinomialNB()
+    >>> clf.fit(X, Y)
+    MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+    >>> print(clf.predict(X[2]))
+	[3]
+
 <!-- ## 4. Comprehensive -->
 
 <!-- Machine learning requires a variety of tools for different situations -->
@@ -111,6 +126,21 @@ methods.
 <!-- general-purpose machine learning library. -->
 
 ## 5. Well Documented
+
+I have found the Scikit-learn documentation to be comprehensive,
+readable, and easy to understand. When doing something new with
+Scikit-learn, I have quickly been able to get to get to grips with how
+to do it after a quick peruse of the documentation, either using
+Python's `help()` function, or the excellent online documentation,
+which includes tutorials as well as documenting the API.
+
+Of course, it also helps that the API is well designed: a lot of the
+time you can guess the correct usage of a new class once you get to
+know a few of the classes.
+
+Only occasionally have I had to fall back to reading the source to
+understand a feature (or, more often, a bug in my own code). Since the
+code is mainly fairly clean Python, even this is not much of a chore.
 
 ## 6. Permissive License
 
