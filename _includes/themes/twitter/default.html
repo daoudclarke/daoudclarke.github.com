@@ -50,7 +50,9 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
-	  {% if page.category %}
+	  {% if page.category && page.category == 'Machine Learning in Practice'%}
+          <a class="brand" href="/machine-learning-practice.html">{{ page.category }}</a>
+	  {% elsif page.category %}
           <a class="brand" href="/categories.html#{{ page.category }}-ref">{{ page.category }}</a>
 	  {% else %}
           <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>

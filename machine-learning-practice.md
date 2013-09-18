@@ -1,7 +1,7 @@
 ---
 layout: default
 hidetitle: true
-category: "Machine Learning in Practice"
+# category: "Machine Learning in Practice"
 title: Machine Learning in Practice
 ---
 <!-- {% include JB/setup %} -->

@@ -1,0 +1,15 @@
+<div class="row-fluid marketing">
+  <div class="span4">
+    <h4><a href="machine-learning-practice.html">Machine Learning in Practice</a></h4>
+    <p>Free guide and news letter on practical machine learning</p>
+  </div>
+  <div class="span4">
+    <h4><a href="https://github.com/daoudclarke">Open source Projects</a></h4>
+    <p>A new classifier based on cones, cryptanalysis and random stuff.
+    </p>
+  </div> 
+  <div class="span4">
+    <h4><a href="http://www.sussex.ac.uk/Users/dc34/">Research page</a></h4>
+    <p>Stuff I'm doing at the University of Sussex</p>
+  </div>
+</div>

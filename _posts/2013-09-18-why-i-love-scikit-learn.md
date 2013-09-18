@@ -7,8 +7,8 @@ tags: []
 ---
 {% include JB/setup %}
 
-TL;DR: _Scikit-learn is great because it has a clean API, is robust,
-fast, easy to use, comprehensive, and well documented and supported,
+_Scikit-learn is great because it has a clean API, is robust, fast,
+easy to use, comprehensive, and well documented and supported,
 released under a permissive license and the developers are cool. If
 you can implement your project in Python and you don't need massively
 scalable algorithms, then it is probably for you._
@@ -127,12 +127,14 @@ Bayes classifier:
 
 ## 5. Well Documented
 
-I have found the Scikit-learn documentation to be comprehensive,
-readable, and easy to understand. When doing something new with
-Scikit-learn, I have quickly been able to get to get to grips with how
-to do it after a quick peruse of the documentation, either using
-Python's `help()` function, or the excellent online documentation,
-which includes tutorials as well as documenting the API.
+I have found the
+[Scikit-learn documentation](http://scikit-learn.org/stable/documentation.html)
+to be comprehensive, readable, and easy to understand. When doing
+something new with Scikit-learn, I have quickly been able to get to
+get to grips with how to do it after a quick peruse of the
+documentation, either using Python's `help()` function, or the
+excellent online documentation, which includes tutorials as well as
+documenting the API.
 
 Of course, it also helps that the API is well designed: a lot of the
 time you can guess the correct usage of a new class once you get to
@@ -144,8 +146,74 @@ code is mainly fairly clean Python, even this is not much of a chore.
 
 ## 6. Permissive License
 
+Scikit-learn is released under the liberal
+[BSD License](http://opensource.org/licenses/BSD-3-Clause) so you can
+use it freely in commercial applications.
+
 ## 7. Well Supported
 
+Scikit-learn must be one of the most actively developed open source
+machine learning projects. Check out the
+[github stats for the last month](https://github.com/scikit-learn/scikit-learn/pulse/monthly):
+at the time of writing, there were 734 commits by 42 authors.
+
+## Alternatives
+
+
+Unfortunately, you can't always have the best. There are numerous
+factors to bear in mind when choosing a library that may impact your
+decision on what to use:
+
+ - __Language__: if you have to integrate your machine learning
+   functionality with legacy code, then this may restrict your choice
+   of language, although it is often possible to avoid this by using a
+   service oriented architecture. Alternatively, you may have to stick
+   to a particular language because of company policy, or because
+   the developers in your team don't want to abandon their favourite
+   language for something new.
+ - __Performance__: for many applications, performance is critical, but
+   if it is not, then this gives you more freedom in which machine
+   learning tools you can use.
+ - __Scalability__: if you need something that is massively scalable
+   (which in my opinion is fairly rare), then you might want to
+   consider something like [Mahout](http://mahout.apache.org/) which
+   is not as comprehensive as Scikit-learn, but is scalable to very
+   large datasets as it is implemented on top of Hadoop.
+
+Some libraries that you may want to consider:
+
+ - __[Weka](http://www.cs.waikato.ac.nz/ml/weka/)__: this is a Java
+   based library with a graphical user interface that allows you to
+   run experiments on small datasets. This is great if you restrict
+   yourself to playing around to get a feel for what is possible with
+   machine learning. However, I would avoid using this in production
+   code at all costs: the API is very poorly designed, the algorithms
+   are not optimised for production use and the documentation is often
+   lacking.
+ - __[Mallet](http://mallet.cs.umass.edu/)__: another Java based library
+   with an emphasis on document classification. I'm not so familiar
+   with this one, but if you have to use Java this is bound to be
+   better than Weka.
+ - [__LibSVM__](http://www.csie.ntu.edu.tw/~cjlin/libsvm/) and
+   [__LibLinear__](http://www.csie.ntu.edu.tw/~cjlin/liblinear/):
+   these are C libraries for support vector machines; there are also
+   bindings or implementations for many other languages. These are the
+   libraries used for support vector machine learning in Scikit-learn.
+
+Of course there are many more; let me know if there is something that
+should be included on this list and why, and I'll add it.
+
+## Conclusion
+
+ - Choose your library carefully
+ - Scikit-learn is robust, with a clean API, and fast implementation
+ - It may not suit every application
+
+Want more? Signup below to get a free ebook
+_[Machine Learning in Practice](/machine-learning-practice.html)_, and
+updates on new posts:
+
+{% include dc/signup %}
 
 <!-- I have seen the detrimental effect -->
 <!-- of choosing a bad library when we chose to use Weka for an early -->
