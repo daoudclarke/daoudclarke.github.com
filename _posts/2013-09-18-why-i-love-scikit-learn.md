@@ -69,6 +69,11 @@ Scikit-learn is unit tested, with around 80% unit test coverage,
 giving us confidence that old features will not break as new ones are
 implemented and bugs are fixed.
 
+UPDATE: [Edward Raff noted on
+/r/MachineLearning](http://www.reddit.com/r/MachineLearning/comments/1mq8fb/why_i_love_scikitlearn/)
+that his experience with SciKit-learn hasn't been so rosy when the
+datasets are large or poorly behaved, so your mileage may vary...
+
 <!-- In my experience, upgrading -->
 <!-- Scikit-learn has occasionally broken my code -->
 
@@ -157,6 +162,10 @@ machine learning projects. Check out the
 [github stats for the last month](https://github.com/scikit-learn/scikit-learn/pulse/monthly):
 at the time of writing, there were 734 commits by 42 authors.
 
+## ...And the Downsides
+
+
+
 ## Alternatives
 
 
@@ -182,6 +191,7 @@ decision on what to use:
 
 Some libraries that you may want to consider:
 
+Java based:
  - __[Weka](http://www.cs.waikato.ac.nz/ml/weka/)__: this is a Java
    based library with a graphical user interface that allows you to
    run experiments on small datasets. This is great if you restrict
@@ -194,11 +204,25 @@ Some libraries that you may want to consider:
    with an emphasis on document classification. I'm not so familiar
    with this one, but if you have to use Java this is bound to be
    better than Weka.
+ -  __[JSAT]__(https://code.google.com/p/java-statistical-analysis-tool/):
+   stands for "Java Statistical Analysis Tool" - created by Edward
+   Raff and was born out of his frustation with Weka (I know the
+   feeling). Looks pretty cool.
+
+Python based:
+ - __[PyBrain]__(http://pybrain.org/): Neural networks are one thing
+   that are missing from SciKit-learn, but this module makes up for
+   it.
+ - __[NLTK]__(http://nltk.org/): really useful if you're doing
+   anything NLP or text mining related.
+
+General:
  - [__LibSVM__](http://www.csie.ntu.edu.tw/~cjlin/libsvm/) and
    [__LibLinear__](http://www.csie.ntu.edu.tw/~cjlin/liblinear/):
    these are C libraries for support vector machines; there are also
    bindings or implementations for many other languages. These are the
    libraries used for support vector machine learning in Scikit-learn.
+
 
 Of course there are many more; let me know if there is something that
 should be included on this list and why, and I'll add it.
