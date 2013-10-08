@@ -1,17 +1,37 @@
 ---
 layout: post
-title: "Why I Love Scikit-learn"
+title: "Machine Learning Libraries"
 description: ""
 category: "Machine Learning in Practice"
 tags: []
 ---
 {% include JB/setup %}
 
-_After my [previous post]({% post_url 2013-09-18-why-i-love-scikit-learn %})
+_After wonderful feedback on my
+[previous post on Scikit-learn]({% post_url 2013-09-18-why-i-love-scikit-learn %})
+from the guys at
+[/r/MachineLearning](http://www.reddit.com/r/MachineLearning/comments/1mq8fb/why_i_love_scikitlearn/),
+I decided to collect the list of machine learning libraries into this
+seperate note. Let me know if there's a library that should be
+included here._
+
 ---------------------------------------------------
 
 
-Java based:
+### Python
+
+ - __[Scikit-learn](http://scikit-learn.org)__: comprehensive and easy
+   to use, I wrote [a whole article]({% post_url 2013-09-18-why-i-love-scikit-learn %})
+   on why I like this library.
+ - __[PyBrain](http://pybrain.org/)__: Neural networks are one thing
+   that are missing from SciKit-learn, but this module makes up for
+   it.
+ - __[nltk](http://nltk.org/)__: really useful if you're doing
+   anything NLP or text mining related.
+
+
+### Java
+
  - __[Weka](http://www.cs.waikato.ac.nz/ml/weka/)__: this is a Java
    based library with a graphical user interface that allows you to
    run experiments on small datasets. This is great if you restrict
@@ -24,34 +44,23 @@ Java based:
    with an emphasis on document classification. I'm not so familiar
    with this one, but if you have to use Java this is bound to be
    better than Weka.
- -  __[JSAT]__(https://code.google.com/p/java-statistical-analysis-tool/):
+ - __[JSAT](https://code.google.com/p/java-statistical-analysis-tool/)__:
    stands for "Java Statistical Analysis Tool" - created by Edward
    Raff and was born out of his frustation with Weka (I know the
    feeling). Looks pretty cool.
 
-Python based:
- - __[PyBrain]__(http://pybrain.org/): Neural networks are one thing
-   that are missing from SciKit-learn, but this module makes up for
-   it.
- - __[NLTK]__(http://nltk.org/): really useful if you're doing
-   anything NLP or text mining related.
+### Other
 
-General:
  - [__LibSVM__](http://www.csie.ntu.edu.tw/~cjlin/libsvm/) and
    [__LibLinear__](http://www.csie.ntu.edu.tw/~cjlin/liblinear/):
    these are C libraries for support vector machines; there are also
    bindings or implementations for many other languages. These are the
    libraries used for support vector machine learning in Scikit-learn.
 
+### Conclusion
 
-Of course there are many more; let me know if there is something that
-should be included on this list and why, and I'll add it.
-
-## Conclusion
-
- - Choose your library carefully
- - Scikit-learn is robust, with a clean API, and fast implementation
- - It may not suit every application
+This article is a work in progress, so please send me your comments or
+criticisms!
 
 Want more? Signup below to get a free ebook
 _[Machine Learning in Practice](/machine-learning-practice.html)_, and
