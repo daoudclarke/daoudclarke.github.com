@@ -49,7 +49,26 @@ included here._
    Raff and was born out of his frustation with Weka (I know the
    feeling). Looks pretty cool.
 
-### Other
+### .NET
+
+ - __[Accord.NET](http://accord-framework.net/intro.html)__: this
+   seems to be pretty comprehensive, and comes recommended by
+   [primaryobjects](http://www.reddit.com/user/primaryobjects) on
+   Reddit. There is perhaps a slight slant towards image processing
+   and computer vision, as it builds on the popular library
+   [AForge.NET](http://www.aforgenet.com/) for this purpose.
+ - Another option is to use one of the Java libraries compiled to .NET
+   using [IKVM](http://www.ikvm.net/) - I have used this approach
+   with success in production.
+
+### C++
+
+ - __[Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit)__:
+   designed for very fast learning and released under a BSD license,
+   this comes recommended by
+   [terath](http://www.reddit.com/user/terath) on Reddit.
+
+### General
 
  - [__LibSVM__](http://www.csie.ntu.edu.tw/~cjlin/libsvm/) and
    [__LibLinear__](http://www.csie.ntu.edu.tw/~cjlin/liblinear/):
@@ -62,7 +81,7 @@ included here._
 This article is a work in progress, so please send me your comments or
 criticisms!
 
-Want more? Signup below to get a free ebook
+Want more? Sign up below to get a free ebook
 _[Machine Learning in Practice](/machine-learning-practice.html)_, and
 updates on new posts:
 

@@ -198,7 +198,7 @@ Some libraries that you may want to consider:
  - Scikit-learn is robust, with a clean API, and fast implementation
  - It may not suit every application
 
-Want more? Signup below to get a free ebook
+Want more? Sign up below to get a free ebook
 _[Machine Learning in Practice](/machine-learning-practice.html)_, and
 updates on new posts:
 
