@@ -164,7 +164,11 @@ at the time of writing, there were 734 commits by 42 authors.
 
 ## ...And the Downsides
 
-
+As well as the benefits of being implemented in a dynamic language,
+you also get the downsides: refactoring is potentially tedious, and
+because there's no strong typing, it is easy to break something
+without realising it, which is where good unit test coverage becomes
+crucial.
 
 ## Alternatives
 
@@ -189,8 +193,7 @@ decision on what to use:
    is not as comprehensive as Scikit-learn, but is scalable to very
    large datasets as it is implemented on top of Hadoop.
 
-Some libraries that you may want to consider:
-
+You may want to consider [some of these alternatives]({% post_url 2013-10-08-machine-learning-libraries %}).
 
 ## Conclusion
 
