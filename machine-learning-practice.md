@@ -139,8 +139,7 @@ Or download <a href="guide.pdf">here</a> if you don't want to sign up.
 
 Hi, I'm Daoud Clarke. I wrote this guide as a summary of my
 experiences applying machine learning in industry. I'm currently a
-Data Scientist at <a href="http://lumi.do">Lumi</a>, and I also work
-part time as a researcher at the
-<a href="http://www.sussex.ac.uk">University of Sussex</a>. My name is
-<a href="http://www.google.co.uk/search?q=daoud+clarke">quite
-googleable</a>.
+Data Scientist at [Lumi](http://lumi.do), and I also work part time as
+a researcher at the
+[University of Sussex](http://www.sussex.ac.uk). My name is
+[quite googleable](http://www.google.co.uk/search?q=daoud+clarke).
