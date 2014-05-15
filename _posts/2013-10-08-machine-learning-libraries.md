@@ -17,6 +17,10 @@ included here._
 
 ---------------------------------------------------
 
+__Update (15 May 2014):__ _thanks to Djalel Benbouzid and Dwayne Campbell
+for additional suggestions. Sorry it's taken me so long to add them..._
+
+---------------------------------------------------
 
 ### Python
 
@@ -28,10 +32,27 @@ included here._
    it.
  - __[nltk](http://nltk.org/)__: really useful if you're doing
    anything NLP or text mining related.
-
+ - __[Theano](http://www.deeplearning.net/software/theano/)__:
+   efficient computation of mathematical expressions using
+   GPU. Excellent for deep learning.
+ - __[Pylearn2](http://deeplearning.net/software/pylearn2/)__: machine
+   learning toolbox built on top of Theano - in very early stages of
+   development.
+ - __[MDP](http://mdp-toolkit.sourceforge.net/)__ (Modular toolkit for
+   Data Processing): a framework that is useful when setting up
+   workflows.
 
 ### Java
 
+ - __[Spark](http://spark.apache.org/)__: Apache's new upstart,
+   supposedly up to a hundred times faster than Hadoop, now includes
+   MLLib, which contains a good selection of machine learning
+   algorithms, including classification, clustering and recommendation
+   generation. Currently undergoing rapid development. Development can
+   be in Python as well as JVM languages.
+ - __[Mahout](https://mahout.apache.org/)__: Apache's machine learning
+   framework built on top of Hadoop, this looks promising, but comes
+   with all the baggage and overhead of Hadoop.
  - __[Weka](http://www.cs.waikato.ac.nz/ml/weka/)__: this is a Java
    based library with a graphical user interface that allows you to
    run experiments on small datasets. This is great if you restrict
@@ -67,6 +88,13 @@ included here._
    designed for very fast learning and released under a BSD license,
    this comes recommended by
    [terath](http://www.reddit.com/user/terath) on Reddit.
+ - __[MultiBoost](http://www.multiboost.org/)__: a fast C++ framework
+   implementing some boosting algorithms as well as some cascades
+   (like the Viola-Jones cascades). It's mainly focused on AdaBoost.MH
+   so it is multi-class/multi-label.
+ - __[Shogun](http://www.shogun-toolbox.org/)__: large machine
+    learning library with a focus on kernel methods and support vector
+    machines. Bindings to Matlab, R, Octave and Python.
 
 ### General
 
