@@ -9,7 +9,11 @@ tags: []
 
 ## 1. Ambiguous Goals
 
+
+
 ## 2. Unrealistic Expectations
+
+
 
 ## 3. Reinventing the Wheel
 
@@ -22,6 +26,14 @@ tags: []
 ## 7. Flawed Experimental Method
 
 ## 8. Perfect Dataset Problem
+
+Datasets vary. If the system you are building will be used on data
+from several different sources, or of different types, then the
+chances are, your system will behave differently for some of these. If
+you build your system around one type of data, it may well end up
+being suboptimal. As an example of this, I once applied
+[active learning](http://en.wikipedia.org/wiki/Active_learning_%28machine_learning%29)
+to a sentiment analysis dataset.
 
 ## 9. Inappropriate Evaluation Metrics
 
