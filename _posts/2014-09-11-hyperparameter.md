@@ -7,7 +7,8 @@ tags: []
 ---
 {% include JB/setup %}
 
-Do you want to be a data scientist?
+Do you want to be a data scientist? Are you a data scientist looking
+to gain some new skills?
 
 I am very happy to announce the launch of
 [Hyperparameter](http://www.hyperparameter.com), my new company
