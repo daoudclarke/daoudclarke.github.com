@@ -17,11 +17,11 @@ defined. What skills do you need to be a data scientist? Well, not
 everyone agrees. In this article we will try to be objective by
 looking at statistics on what skills employers recruiting data
 scientists are looking for. We will use data from
-[IT Jobswatch](http://itjobswatch.co.uk), which is a fantastic
-resource for those looking to upskill themselves: it provides
-comprehensive statistics on the keywords that recruiters mention in
-job advertisements. I will also give my own opinions based on my
-experience recruiting data scientists and working as one at
+[IT Jobswatch](http://www.itjobswatch.co.uk/jobs/uk/data%20scientist.do),
+which is a fantastic resource for those looking to upskill themselves:
+it provides comprehensive statistics on the keywords that recruiters
+mention in job advertisements. I will also give my own opinions based
+on my experience recruiting data scientists and working as one at
 [Lumi](http://lumi.do).
 
 Some caveats:
@@ -53,7 +53,7 @@ Qualifications
 If you know you want to be a data scientist, and you're trying to
 decide whether to go to university, or what course you might do, then
 the answer is quite clear. 37% of data science jobs advertised mention
-the word &ldqo;degree&rdquo;, and 34% mention &ldquo;PhD&rdquo;. A PhD
+the word &ldquo;degree&rdquo;, and 34% mention &ldquo;PhD&rdquo;. A PhD
 involving experimentation, numerical analysis or computer programming
 may well be beneficial to getting a data scientist position, but
 anyone who can demonstrate analytical ability and knowledge of how to
