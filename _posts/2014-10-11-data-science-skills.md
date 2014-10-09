@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hyperparameter - Data Science Training"
+title: "So you want to be a data scientist? (Part 1)"
 description: ""
 category: "Machine Learning in Practice"
 tags: []
@@ -67,6 +67,10 @@ data scientist you will need to combine many skills. As someone who
 studied physics myself, I am biased, but a typical physics course will
 cover many of the things you need to know: how to run experiments, how
 to analyse results and how to program - a very good starting point.
+
+Some universities are now offering courses in data science - these
+could be a good choice, but are certainly not necessary if this is
+what you want to do.
 
 Skills
 ------
