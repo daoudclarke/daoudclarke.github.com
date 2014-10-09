@@ -139,17 +139,24 @@ Programming Languages
 ---------------------
 
 If you want to be a data scientist, you will have to be able to
-program, which means you will need to know at least one language. By
-far the most popular is R (55%) because of its very comprehensive set
-of libraries for scientific computing, followed by Java (45%), because
-it's so darned popular (personally I'm not a fan) and Python (43%), my
-favourite because of its resources for machine learning
+program, which means you will need to know at least one language. Here
+are your options:
+
+- By far the most popular is R (55%) because of its very comprehensive
+set of libraries for scientific computing;
+ - This is followed by Java (45%), because it's so darned popular
+(personally I'm not a fan);
+ - Python (43%) is my favourite because of its resources for machine
+learning;
 ([I wrote a whole article about it](http://daoudclarke.github.io/machine%20learning%20in%20practice/2013/09/18/why-i-love-scikit-learn/)),
 it's really fast to write code, the code is generally very readable
 and runs quickly because it uses C libraries internally, and can be
-used for production code as well as quick scripts for analysis. Other
-popular languages for data scientists are MATLAB (33%), C++ (21%),
-Scala (17%), C# (7%), Visual Basic (7%), Clojure (7%) and Ruby (6%).
+used for production code as well as quick scripts for analysis;
+ - MATLAB (33%) is an old favourite for scientific computing; whilst
+   it is powerful, unlike other options it is not freely available.
+ - Other popular languages for data scientists are C++
+(21%), Scala (17%), C# (7%), Visual Basic (7%), Clojure (7%) and Ruby
+(6%).
 
 What next?
 ----------
