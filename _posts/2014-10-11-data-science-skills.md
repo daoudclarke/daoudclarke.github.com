@@ -147,7 +147,7 @@ set of libraries for scientific computing;
  - This is followed by Java (45%), because it's so darned popular
 (personally I'm not a fan);
  - Python (43%) is my favourite because of its resources for machine
-learning;
+learning
 ([I wrote a whole article about it](http://daoudclarke.github.io/machine%20learning%20in%20practice/2013/09/18/why-i-love-scikit-learn/)),
 it's really fast to write code, the code is generally very readable
 and runs quickly because it uses C libraries internally, and can be
