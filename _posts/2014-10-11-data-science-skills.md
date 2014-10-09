@@ -7,9 +7,6 @@ tags: []
 ---
 {% include JB/setup %}
 
-So you want to be a data scientist? (part 1)
-============================================
-
 &ldquo;Data Scientist&rdquo; is definitely the hot new job
 description. It is such a new title that the roles and
 responsibilities associated with it are still not clearly
