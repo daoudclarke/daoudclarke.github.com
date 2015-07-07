@@ -15,7 +15,7 @@ mainly for my benefit, but you might like them too!
 Neural Nets / Deep Learning
 ---------------------------
 
-[BilBOWA: Fast Bilingual Distributed Representations without Word Alignments](http://jmlr.org/proceedings/papers/v37/gouws15.pdf)
+### [BilBOWA: Fast Bilingual Distributed Representations without Word Alignments](http://jmlr.org/proceedings/papers/v37/gouws15.pdf)
 
 *Stephan Gouws, Yoshua Bengio, Greg Corrado*
 
@@ -23,7 +23,7 @@ Neural Nets / Deep Learning
   words in two languages without having to learn a mapping between
   them.
   
-[Compressing Neural Networks with the Hashing Trick](http://jmlr.org/proceedings/papers/v37/chenc15.pdf)
+### [Compressing Neural Networks with the Hashing Trick](http://jmlr.org/proceedings/papers/v37/chenc15.pdf)
 
 *Wenlin Chen, James Wilson, Stephen Tyree, Kilian Weinberger, Yixin Chen*
  
@@ -32,7 +32,7 @@ Neural Nets / Deep Learning
   potentially use it on low memory devices like mobile phones!
   
 
-[Batch Normalization: Accelerating Deep Network Training by Reducing
+### [Batch Normalization: Accelerating Deep Network Training by Reducing
 Internal Covariate Shift](http://jmlr.org/proceedings/papers/v37/ioffe15.pdf)
 
 *Sergey Ioffe, Christian Szegedy*
@@ -40,7 +40,7 @@ Internal Covariate Shift](http://jmlr.org/proceedings/papers/v37/ioffe15.pdf)
 **Why this paper is cool:** Makes deep neural network training super
   fast, giving a new state of the art for some datasets.
   
-[Deep Learning with Limited Numerical Precision](http://jmlr.org/proceedings/papers/v37/gupta15.pdf)
+### [Deep Learning with Limited Numerical Precision](http://jmlr.org/proceedings/papers/v37/gupta15.pdf)
 
 *Suyog Gupta, Ankur Agrawal, Kailash Gopalakrishnan, Pritish Narayanan*
 
