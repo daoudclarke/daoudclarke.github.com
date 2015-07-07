@@ -12,12 +12,12 @@ today in my head?! Clearly I can't. This is a list of pointers to my
 favourite papers from today, and why I think they are cool. This is
 mainly for my benefit, but you might like them too!
 
-BilBOWA: Fast Bilingual Distributed Representations without Word Alignments
----------------------------------------------------------------------------
+Deep Learning
+-------------
+
+[BilBOWA: Fast Bilingual Distributed Representations without Word Alignments](http://jmlr.org/proceedings/papers/v37/gouws15.pdf)
 
 *Stephan Gouws, Yoshua Bengio, Greg Corrado*
-
-http://jmlr.org/proceedings/papers/v37/gouws15.pdf
 
 **Why this paper is cool:** It simultaneously learns word vectors for
   words in two languages without having to learn a mapping between
