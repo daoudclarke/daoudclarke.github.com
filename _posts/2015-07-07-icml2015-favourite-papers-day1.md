@@ -48,11 +48,37 @@ Neural Nets / Deep Learning
   insight is to use randomness to do the rounding. The goal is to
   eventually build custom hardware to make learning much faster.
 
+Recommendations etc.
+--------------------
 
-Conclusion
-----------
+### [Fixed-point algorithms for learning determinantal point processes](http://jmlr.org/proceedings/papers/v37/mariet15.pdf)
+	
+*Zelda Mariet, Suvrit Sra*
 
-That's it - what a day!
+**Why this paper is cool** If you want to recommend a set of things,
+  rather than just an individual thing, how do you choose the best
+  set? This will tell you.
+  
+### [Surrogate Functions for Maximizing Precision at the Top](http://jmlr.org/proceedings/papers/v37/kar15.pdf)
+
+**Why this paper is cool:** If you only care about the top *n* things
+  you recommend, this technique works faster and better than other
+  approaches.
+
+*Purushottam Kar, Harikrishna Narasimhan, Prateek Jain*
+
+
+And Finally...
+--------------
+
+### [Learning to Search Better than Your Teacher](http://jmlr.org/proceedings/papers/v37/changb15.pdf)
+
+*Kai-Wei Chang, Akshay Krishnamurthy, Alekh Agarwal, Hal Daume, John Langford*
+
+**Why this paper is cool:** A new, general way to do structured
+  prediction (tasks like dependency parsing or semantic parsing) which
+  works well even when there are errors in the training set. Thanks to
+  the authors for talking me through this one!
 
 Want more? Sign up below to get a free ebook
 _[Machine Learning in Practice](/machine-learning-practice.html)_, and
