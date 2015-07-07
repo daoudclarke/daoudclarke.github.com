@@ -32,8 +32,7 @@ Neural Nets / Deep Learning
   potentially use it on low memory devices like mobile phones!
   
 
-### [Batch Normalization: Accelerating Deep Network Training by Reducing
-Internal Covariate Shift](http://jmlr.org/proceedings/papers/v37/ioffe15.pdf)
+### [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](http://jmlr.org/proceedings/papers/v37/ioffe15.pdf)
 
 *Sergey Ioffe, Christian Szegedy*
 
