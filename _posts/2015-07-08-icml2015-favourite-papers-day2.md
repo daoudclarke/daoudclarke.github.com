@@ -49,7 +49,26 @@ after rectifying and then approximates this with a Gaussian
 distribution. Either way, this is an exciting development for neural
 networks.
 
+Optimisation
+------------
 
+[Gradient-based Hyperparameter Optimization through Reversible Learning](http://jmlr.org/proceedings/papers/v37/maclaurin15.pdf)
+
+*Dougal Maclaurin, David Duvenaud, Ryan Adams*
+
+Hyperparameter optimisation is important when training neural networks
+because there are so many of the things floating around. How do you
+know what to set them to? Normally you have to perform some kind of
+search on the space of possible parameters, and Bayesian techniques
+have been very helpful at doing this. This paper suggests something
+entirely different and completely audacious. The authors are able to
+compute gradients for hyperparameters using automatic differentiation
+*after going through a whole round of stochastic gradient descent
+learning*. That's quite a feat. What this means is that we can answer
+questions about what the optimal hyperparameter settings look like in
+different settings - and makes a whole set of things that was
+previously a &ldquo;black art&rdquo; a lot more scientific and
+understandable.
 
 
 Want more? Sign up below to get a free ebook
