@@ -52,7 +52,7 @@ networks.
 Optimisation
 ------------
 
-[Gradient-based Hyperparameter Optimization through Reversible Learning](http://jmlr.org/proceedings/papers/v37/maclaurin15.pdf)
+### [Gradient-based Hyperparameter Optimization through Reversible Learning](http://jmlr.org/proceedings/papers/v37/maclaurin15.pdf)
 
 *Dougal Maclaurin, David Duvenaud, Ryan Adams*
 
