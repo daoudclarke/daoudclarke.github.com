@@ -7,18 +7,17 @@ tags: []
 ---
 {% include JB/setup %}
 
+After watching [Michael Skok's excellent talk on Culture, Vision and
+Mission](https://www.youtube.com/watch?v=EMIa3XhQpnk), I was tempted
+to have a bash at defining the values that I care about. Here's my
+attempt.
+
+
 Benefit People
 --------------
 
-Our goal is to benefit as many people as much as possible. Maximise
-total benefit. It is important that our goal is _not_ to benefit
-companies, organisations or shareholders, but does include customers
-_and_ employees. The best kind of benefit is that which helps people
-benefit people. This leads to success, and everyone benefits
-(including shareholders).
-
-It is also important that we care about the total _benefit_: this is
-more general than just maximising wealth, for example.
+Benefit as many people as much as possible. The best kind of benefit
+is that which helps people benefit people.
 
 
 Make it Easy
@@ -32,19 +31,28 @@ Do it with Love
 ---------------
 
 Love is real. If you do something with love, it will be different,
-better. People will notice. You will be happy.
+better.
 
 
-Resolve Disputes with Experiments
----------------------------------
+Try it
+------
 
+Every idea is possible. Experiment.
 
 
 Strength in Diversity
 ---------------------
 
+Be yourself. Encourage diversity. Accommodate diverse needs.
 
 
-Family over Work
-----------------
+Family Before Work
+------------------
 
+Spend time with your family. Take time for yourself.
+
+
+Trust
+-----
+
+Evaluate yourself. Trust others.
