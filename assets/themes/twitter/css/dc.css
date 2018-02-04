@@ -2,17 +2,17 @@
         padding-top: 0px;
         padding-bottom: 40px;
         font-size: 12pt;
-	font-family: 'Neuzeit Grotesk Bold';
+	font-family: 'Sabon Roman';
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1, h2, h3, h4, h5, h6, nav.li {
+	font-family: 'Neuzeit Grotesk Bold';
 	font-weight: normal;
       }
 
-      p, ul, li {
-        /* font-family: verdana; */
-	  font-family: 'Sabon Roman';
-      }
+      /* p, ul, li { */
+      /*   font-family: verdana; */
+      /* } */
 
       .basmallah {
         margin: 3px;
