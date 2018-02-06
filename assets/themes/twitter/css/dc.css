@@ -64,11 +64,11 @@
         margin-top: 28px;
       }
 
-      a {
+      a, .navbar .nav>li>a {
 	  color: #463489;	  
       }
 
-      a :hover {
+      a :hover, .navbar .nav>li>a:hover {
 	  color: #8463ff;
 	  underline: none;
       }
