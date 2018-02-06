@@ -16,6 +16,10 @@
 	box-shadow: none;
       }
 
+     p {
+	 text-align: justify;
+	 hyphens: auto;
+     }
 
       /* p, ul, li { */
       /*   font-family: verdana; */
