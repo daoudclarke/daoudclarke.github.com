@@ -3,11 +3,13 @@
         padding-bottom: 40px;
         font-size: 12pt;
 	font-family: 'Sabon Roman';
-      }
+	background-color: #e6e3ef;
+     }
 
       h1, h2, h3, h4, h5, h6, input, button, .navbar {
 	font-family: 'Neuzeit Grotesk Bold';
 	font-weight: normal;
+	color: #241b47;
       }
 
       /* p, ul, li { */
