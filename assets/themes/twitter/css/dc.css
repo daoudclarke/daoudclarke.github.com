@@ -27,6 +27,7 @@
       .navbar-inner {
 	  border: none;
 	  background: none;
+	  box-shadow: none;
       }
       
       /* Custom container */
@@ -60,4 +61,11 @@
         margin-top: 28px;
       }
 
-      
+      a {
+	  color: #463489;	  
+      }
+
+      a :hover {
+	  color: #8463ff;
+	  underline: none;
+      }
