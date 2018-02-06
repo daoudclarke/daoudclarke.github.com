@@ -69,7 +69,7 @@
 	  color: #463489;	  
       }
 
-      a :hover, .navbar .nav>li>a:hover {
+      a:hover, .navbar .nav>li>a:hover {
 	  color: #8463ff;
 	  underline: none;
       }
