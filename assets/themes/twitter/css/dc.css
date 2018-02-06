@@ -6,10 +6,12 @@
 	background-color: #f9f7ff;
      }
 
-      h1, h2, h3, h4, h5, h6, input, button, .navbar, .navbar .brand {
+     h1, h2, h3, h4, h5, h6, input, button, .navbar, .navbar .brand,
+     .navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
 	font-family: 'Neuzeit Grotesk Bold';
 	font-weight: normal;
 	color: #241b47;
+	background: none;
       }
 
 
