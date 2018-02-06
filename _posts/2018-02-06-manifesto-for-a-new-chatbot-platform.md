@@ -1,14 +1,12 @@
 ---
 layout: post
-title: "Benefit People: Thinking Through Culture and Values"
+title: "Planning for the Perfect Dialogue with Monte Carlo Tree Search"
 description: ""
-category: "Startups"
+category: "Chatbots"
 tags: []
 ---
 {% include JB/setup %}
 
-Planning for the Perfect Dialogue with Monte Carlo Tree Search
-==============================================================
 
 I've always found it frustrating that chatbot developers seem to be
 satisfied with frameworks that don't even attempt to mimic anything
