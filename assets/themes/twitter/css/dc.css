@@ -71,5 +71,5 @@
 
       a:hover, .navbar .nav>li>a:hover {
 	  color: #8463ff;
-	  underline: none;
+	  text-decoration: none;
       }
