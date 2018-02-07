@@ -16,7 +16,7 @@
 	box-shadow: none;
       }
 
-     p, p li {
+     p, .content li {
 	 text-align: justify;
 	 hyphens: auto;
      }

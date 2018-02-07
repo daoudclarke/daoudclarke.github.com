@@ -1,7 +1,4 @@
 To do:
- - Finish blog post
- - Change highlighter to Rouge
- - Decide on body text font, and purchase font if necessary
  - Fix justification of <li> elements
  - Fix hyphenation on blog
  - Research how to use Twitter properly
