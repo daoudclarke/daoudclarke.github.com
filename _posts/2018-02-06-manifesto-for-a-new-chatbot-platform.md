@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Planning for the Perfect Dialogue with Monte Carlo Tree Search"
+title: "Manifesto for an Intelligent Chatbot Platform"
 description: ""
 category: "Chatbots"
 tags: []
