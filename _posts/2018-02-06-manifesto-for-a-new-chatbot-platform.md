@@ -184,8 +184,7 @@ three major components of the system:
    planning. [Here's a paper](https://arxiv.org/pdf/1507.06527.pdf) on
    using deep learning to solve POMDPs which happen to be Atari games
    (what is it with the games?).
- - And
-   [Here's a paper from NIPS 2014](http://www.cs.umd.edu/~miyyer/pubs/2014_nips_generation.pdf)
+ - And [here's a paper from NIPS 2014](http://www.cs.umd.edu/~miyyer/pubs/2014_nips_generation.pdf)
    on natural language generation using deep learning. Also
    [language modeling](https://en.wikipedia.org/wiki/Language_model)
    is often an important component in natural language generation, and
@@ -210,3 +209,62 @@ sophisticated components around now, and all it requires is putting
 them together in the right way and engineering the thing correctly. Of
 course, that's still a huge challenge, but one I'm quite excited about
 undertaking. I like big challenges.
+
+Practical considerations
+========================
+
+Now I can hear you thinking "It's all very well taking on such a grand
+challenge, but who's going to pay for it?" One option would be to try
+and build this thing in academia, after all, I've done the academic
+thing, so it should be possible to follow that route. The problem is,
+speaking with my metaphorical mortarboard on, in my experience, and
+speaking for myself, us academics tend not to build useful things
+things. You see, our motivation is naturally skewed towards publishing
+papers, which is what academics do, rather than building something
+that people actually want. And if we can squeeze a few percentage
+points of improvement out of a problem, we can publish a paper.
+
+So if not academia, then what? I happen to find myself in the lucky
+situation of having some spare time at the moment. My current contract
+requires me to work only 15 hours a week, so that leaves plenty of
+spare time. I could try and build this just for fun, as a side
+project. However, at some point, my spare time will run out and I
+suspect this is going to take a lot longer than the three months I
+have left on my contract. The next obvious option is to try and build
+a company from it. This would either be a traditional startup, with
+funding and all the craziness that goes along with it, or a
+bootstrapped company. Actually a startup would not be a bad vehicle
+for something as ambitious as this. However, there are at least two
+reasons I don't want to go down the traditional startup route:
+
+ - I'm not convinced that this can be a billion dollar business
+   (yet). The thing is, people want chatbots, but they don't know they
+   want what I'm building (although they may well _need_ it). At some
+   point in the future that may change.
+ - I don't personally enjoy the pressure to grow quickly that comes
+   with a startup. I would rather build a successful and sustainable
+   business slowly. That's particularly true because I think it's
+   going to take a long time to build this properly. Also, I don't
+   hold with "stealth mode" - I'd rather do this out in the open.
+
+So the current plan is for a simple bootstrapped company selling
+chatbots as a service. Yes, I know, there are a lot already, but I
+think there is space for another. The market is predicted to grow
+quickly in the next few years - we'll see whether this turns out to be
+true or not. Of course I won't be building my full crazy idea above
+straight away, I will only build each component properly as it is
+needed, and instead focus on building something that people want,
+preferable in focused niche.
+
+One niche that I think is likely to be profitable is
+chatbots for marketing, specifically,
+[Facebook Messenger bots as a landing point for Facebook ads](https://blog.whatshelp.io/3-strategies-to-use-messenger-bot-and-facebook-ads-for-lead-generation-8a40f033510c).
+So, if you're interested in this idea, please get in touch! I think it
+has a lot of potential for increasing the return on investment of
+Facebook ads.
+
+If you liked this, please sign up to hear when I next post - and
+thanks for reading!
+
+{% include dc/signup %}
+
