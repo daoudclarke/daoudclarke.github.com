@@ -107,3 +107,106 @@ but is it achievable?" I believe it is, and in this section I will
 outline my proposed solution.
 
 ![Chatbot platform architecture]({{"/img/chatbot-platform.png"}})
+
+The above diagram is a very rough idea of what the new platform might
+consist of. My goal is just to show how I think the proposed goals can
+be achieved using existing technology. I'll try and flesh out in
+future posts what each component might look like, but for now, here's
+a high level summary, following the diagram anti-clockwise from the
+user:
+
+ - A natural language query or response from the user is
+   received. This is parsed by a *semantic parser*. I've not found a
+   good concise description of semantic parsing on the interwebs,
+   which is strange, but it's not the same as parsing (although
+   similar) and it's not the same as (traditional) semantics. A
+   semantic parser takes a natural language expression and translates
+   it to some "logical form" where the logical form is anything that a
+   computer would naturally understand, such as a SQL query, an
+   expression in first order logic, a JSON string or an "intent". The
+   typical application is to use natural language to perform database
+   queries. Anyway, this is a well studied sub-field of natural
+   language processing (despite its lack of a Wikipedia page). An
+   example of an almost-state-of-the-art system is the
+   [SEMPRE system](https://nlp.stanford.edu/software/sempre/) from
+   Stanford.
+ - A *planning system* then chooses the next best action to take given
+   its knowledge of the current state of the world and the latest user
+   input. This problem is also a well studied one. A very general way
+   of describing planning problems is something called a
+   [Partially Observable Markov Decision Process](https://en.wikipedia.org/wiki/Partially_observable_Markov_decision_process),
+   or POMDP (pronounced "pom dee pee") for short. In fact, POMDPs have
+   been used to plan dialogue, as described in
+   [this overview by Steve Young at Cambridge](http://mi.eng.cam.ac.uk/~sjy/papers/ygtw13.pdf).
+   My idea is to use
+   [Monte-Carlo tree search](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search)
+   to solve our planning problem, an aproach described in
+   [this paper from NIPS 2010](https://papers.nips.cc/paper/4031-monte-carlo-planning-in-large-pomdps).
+   I'm really excited about the potential for Monte-Carlo tree search
+   to do something other than playing games really well (in case you
+   didn't know it's a large component of
+   [AlphaGo](https://en.wikipedia.org/wiki/AlphaGo)). The planning
+   system makes use of the Knowledge Modules provided by the bot
+   designer to inform the decisions it makes.
+ - Once an action has been decided upon, an *action interpreter* makes
+   use the the ability modules provided by the bot designer to perform
+   actions on external APIs, or passes on a logical form to the next
+   system to send a response to the user.
+ - A [*natural language generator*](https://en.wikipedia.org/wiki/Natural_language_generation)
+   interprets the logical forms and sends the response back to the
+   user. The generator can make use of the style modules to determine
+   the best expression for each logical form.
+
+Hopefully this is enough to convince you that the plan is not entirely
+crazy. Each component is well studied (at least in a research
+setting), so it is not too far-fetched to assume that they can be put
+together into something useful. The biggest uncertainty in my mind is
+around the planning system, and exactly how this will work
+effectively. I plan to flesh that out in a future blog post.
+
+Some readers may be disappointed that I'm not proposing some
+new-fangled deep learning technique to solve this humongous
+problem. In fact, I'm pretty much proposing the same good old
+fashioned AI techniques that were popular in the 70s and 80s. Actually
+I think systems built in that time period got a lot of things right,
+but the individual components were not developed enough to make the
+system as a whole a success, at least when applied to a general
+setting. In fact, in some cases, the improvements in the individual
+components are because of algorithmic developments like deep learning,
+along with the abundance of data and computing power. There is
+definitely potential for making use of deep learning to improve the
+three major components of the system:
+
+ - [Here's a paper](https://arxiv.org/abs/1706.04326) on using deep
+   learning for semantic parsing
+ - Deep learning was a large part of AlphaGo's success so it can
+   definitely be used to improve
+   planning. [Here's a paper](https://arxiv.org/pdf/1507.06527.pdf) on
+   using deep learning to solve POMDPs which happen to be Atari games
+   (what is it with the games?).
+ - And
+   [Here's a paper from NIPS 2014](http://www.cs.umd.edu/~miyyer/pubs/2014_nips_generation.pdf)
+   on natural language generation using deep learning. Also
+   [language modeling](https://en.wikipedia.org/wiki/Language_model)
+   is often an important component in natural language generation, and
+   neural networks have been very successful at this task.
+
+It's almost inevitable that deep learning will take over most
+components of my proposed system at some point. But they are not
+essential, at least initially.
+
+But still, I should probably try and answer the question of why not
+build a single big deep net to rule them all? One answer is that we
+don't know how to do this yet. But even if it were possible, I do not
+think I would want to try and do this. The answer is engineering. When
+I know how each component is supposed to work, I can fix it. When a
+deep net doesn't work, all I can do is add more data and tweak the
+algorithm, which may or may not solve the problem (and may introduce
+new ones).
+
+The argument I'm trying to make here is that natural language
+interfaces should be a solved problem, given that we have such
+sophisticated components around now, and all it requires is putting
+them together in the right way and engineering the thing correctly. Of
+course, that's still a huge challenge, but one I'm quite excited about
+undertaking. I like big challenges.
