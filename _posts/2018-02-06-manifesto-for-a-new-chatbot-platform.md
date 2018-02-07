@@ -263,8 +263,8 @@ So, if you're interested in this idea, please get in touch! I think it
 has a lot of potential for increasing the return on investment of
 Facebook ads.
 
-If you liked this, please sign up to hear when I next post - and
-thanks for reading!
+If you liked this, please sign up to my blog _Machine Learning in
+Practice_ - and thanks for reading!
 
 {% include dc/signup %}
 
