@@ -1,17 +1,18 @@
 To do:
 
- - Set up cold emailing for marketing list
- - Come up with a cold calling plan
- - Find people to cold call
+ - Compare 50 tools on chatbottech.io
+ - Cancel Shopify and Octane AI subscriptions
+ - Restructure chatbottech.io to have tags rather than categories
+ - Add review summary to review pages
+ - Add images to review pages
+ - Get backlinks to competitor pages from ahrefs and send cold emails asking for links
+ - Landing page at hyperparameter.com: write copy
+ - Landing page at hyperparameter.com: design
+ - Landing page at hyperparameter.com: create
+ - Use staticman to allow user reviews
  - Find marketing events to attend
- - Think about putting on an event
- - Change font to Charter
  - Find forums for chatbots including Reddit and join the discussion
- - Post blog post on Twitter, LinkedIn, Hacker News, Reddit
- - Research chatbottech.io idea: competitors
- - Blog post: what is a chatbot?
- - Blog post: why do I want a chatbot?
  - Blog post: skills needed to build a chatbot
  - Create e-book to encourage email signups on chatbottech.io
- - Design chatbottech.io
+ - Change font to Charter
 
