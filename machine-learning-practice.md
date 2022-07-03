@@ -8,8 +8,6 @@ title: Machine Learning in Practice
 
 {% include dc/title %}
 
-{% include dc/signup %}
-
 # Seven Steps to Success
 
 ## Machine Learning in Practice

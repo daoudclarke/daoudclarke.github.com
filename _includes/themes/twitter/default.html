@@ -51,17 +51,17 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
-	  {% if page.category && page.category == 'Machine Learning in Practice'%}
-          <a class="brand" href="/machine-learning-practice.html">{{ page.category }}</a>
-	  {% elsif page.category %}
+	  {% if page.category %}
           <a class="brand" href="/categories.html#{{ page.category }}-ref">{{ page.category }}</a>
 	  {% else %}
           <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
 	  {% endif %}
           <ul class="nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
+              <a href="/categories">Categories</a>
+<!--            {% assign pages_list = page.my_pages %}-->
+<!--            {% assign pages_list = "categories|pages" | split: "|" %}-->
+<!--            {% assign group = 'navigation' %}-->
+<!--            {% include JB/pages_list %}-->
           </ul>
         </div>
       </div>
@@ -76,8 +76,6 @@
       <hr>
       <footer>
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
       </footer>
 
