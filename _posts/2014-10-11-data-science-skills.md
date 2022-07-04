@@ -158,17 +158,3 @@ used for production code as well as quick scripts for analysis;
 (21%), Scala (17%), C# (7%), Visual Basic (7%), Clojure (7%) and Ruby
 (6%).
 
-What next?
-----------
-
-Over at [Hyperparameter](http://www.hyperparameter.com) we offer
-training for data
-scientists. [Courses coming up](http://www.hyperparameter.com/#courses)
-include *Introduction to Python for Data Scientists* and *Introduction
-to Machine Learning*.
-
-Want more? Sign up below to get a free ebook
-_[Machine Learning in Practice](/machine-learning-practice.html)_, and
-updates on new posts:
-
-{% include dc/signup %}

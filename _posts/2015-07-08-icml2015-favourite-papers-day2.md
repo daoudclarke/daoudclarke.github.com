@@ -117,8 +117,3 @@ There were many more interesting papers - too many to write up
 here. Take a look at the [schedule](http://icml.cc/2015/?page_id=825)
 and find your favourite! Let me know on [Twitter](https://twitter.com/daarkecloud).
 
-Want more? Sign up below to get a free ebook
-_[Machine Learning in Practice](/machine-learning-practice.html)_, and
-updates on new posts:
-
-{% include dc/signup %}

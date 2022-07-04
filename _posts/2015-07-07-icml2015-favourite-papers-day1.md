@@ -79,9 +79,3 @@ And Finally...
   prediction (tasks like dependency parsing or semantic parsing) which
   works well even when there are errors in the training set. Thanks to
   the authors for talking me through this one!
-
-Want more? Sign up below to get a free ebook
-_[Machine Learning in Practice](/machine-learning-practice.html)_, and
-updates on new posts:
-
-{% include dc/signup %}

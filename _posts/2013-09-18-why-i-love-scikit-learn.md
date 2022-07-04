@@ -201,15 +201,3 @@ You may want to consider [some of these alternatives]({% post_url 2013-10-08-mac
  - Scikit-learn is robust, with a clean API, and fast implementation
  - It may not suit every application
 
-Want more? Sign up below to get a free ebook
-_[Machine Learning in Practice](/machine-learning-practice.html)_, and
-updates on new posts:
-
-{% include dc/signup %}
-
-<!-- I have seen the detrimental effect -->
-<!-- of choosing a bad library when we chose to use Weka for an early -->
-<!-- project on sentiment analysis. At the time, it was probably the most -->
-<!-- comprehensive machine learning library available, however the API it -->
-<!-- provided was terrible. We ended up writing our own data format and -->
-<!-- converting to -->

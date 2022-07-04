@@ -109,15 +109,3 @@ for additional suggestions. Sorry it's taken me so long to add them..._
 This article is a work in progress, so please send me your comments or
 criticisms!
 
-Want more? Sign up below to get a free ebook
-_[Machine Learning in Practice](/machine-learning-practice.html)_, and
-updates on new posts:
-
-{% include dc/signup %}
-
-<!-- I have seen the detrimental effect -->
-<!-- of choosing a bad library when we chose to use Weka for an early -->
-<!-- project on sentiment analysis. At the time, it was probably the most -->
-<!-- comprehensive machine learning library available, however the API it -->
-<!-- provided was terrible. We ended up writing our own data format and -->
-<!-- converting to -->
