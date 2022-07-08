@@ -99,3 +99,7 @@
       .page-header {
           border: 0px;
       }
+
+      p {
+          margin-bottom: 1rem;
+      }
