@@ -79,12 +79,14 @@
       }
 
       a, .navbar .nav>li>a {
-	  color: #463489;	  
+	  color: #7f5eff;
+          font-weight: bold;
       }
 
       a:hover, .navbar .nav>li>a:hover {
-	  color: #8463ff;
+	  color: #b29eff;
 	  text-decoration: none;
+          font-weight: bold;
       }
 
       .article-title {
