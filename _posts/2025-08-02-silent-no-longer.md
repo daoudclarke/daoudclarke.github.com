@@ -29,10 +29,10 @@ their own will not have a large impact. But all of us together will.
 
 We can't all attend protests or donate money. But we can all speak
 out. We can write to our elected representatives. We can talk to our
-friends and family. And we can write blog posts. And it _will_ make a
-difference. We have the potential to change public opinion. And the
-politicians will always follow the public opinion, even if they are
-sometimes slow.
+friends and family. And we can write blog posts. And it is very
+possible that it _will_ make a difference. We have the potential to
+change public opinion. And the politicians will always follow the
+public opinion, even if they are sometimes slow.
 
 For those of us that hold positions of power or influence, there is an
 opportunity to make a bigger impact. At the start of [Russia's invasion of Ukraine](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine),
@@ -62,11 +62,10 @@ Daoud
 
 ## Acknowledgements
 
-First I should thank my teachers from Palestine, to whom I owe an
+I first want to thank my teachers from Palestine, to whom I owe an
 enormous debt. Secondly, my parents, who met each other there, and
 made it my spiritual home.
 
-Finally, I'm so grateful to
-[HasanAbi](https://en.wikipedia.org/wiki/Hasan_Piker) for teaching me
-that we can make a difference. His unending efforts and dedication to
-educating us have been an inspiration for me.
+Finally, I'm so grateful to those in the independent media that are
+standing up for truth and for teaching me that we can make a
+difference.
