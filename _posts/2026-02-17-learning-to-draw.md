@@ -40,4 +40,4 @@ more, I do that, the closer I get to my goal. I've realised that my
 favourite drawings are the ones I've drawn freely without trying too
 hard to make it "good". So I'm going to continue down that path...
 
-
+![Rough drawing of a woman's face with curly hair](/img/wendelina.jpg)
