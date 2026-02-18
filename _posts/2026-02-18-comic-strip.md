@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comic Strip - 28th February 2026"
+title: "Comic Strip - 18th February 2026"
 description: ""
 tags: []
 ---
