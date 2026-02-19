@@ -26,6 +26,6 @@ context could be allowed to attend to any token within that range,
 while we try and predict the second half.
 
 In fact, that's pretty much what Katz et al. did in their paper
-[https://arxiv.org/abs/2412.18487](https://arxiv.org/abs/2412.18487). It
+[Segment-Based Attention Masking for GPTs](https://arxiv.org/abs/2412.18487). It
 would be interesting to see if prompt repetition gives an improvement
 with their models - logically one would expect not.
