@@ -2,6 +2,7 @@
 layout: post
 title: "Repeating Prompts"
 description: ""
+image: "/img/prompt-repetition.jpg"
 tags: []
 ---
 {% include JB/setup %}
