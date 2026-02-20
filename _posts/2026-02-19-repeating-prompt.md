@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "Repeating Prompts"
-image: "/img/prompt-repetition.jpg"
+image: "https://daoudclarke.net/img/prompt-repetition.jpg"
 tags: []
 ---
 {% include JB/setup %}
+
+<!-- more -->
 
 Someone at work shared an interesting paper from Google called [Prompt
 Repetition Improves Non-Reasoning LLMs](https://arxiv.org/pdf/2512.14982). 

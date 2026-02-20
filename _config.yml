@@ -26,7 +26,8 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://daoudclarke.github.com
+production_url : https://daoudclarke.net
+url : https://daoudclarke.net
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -128,3 +129,5 @@ JB :
   
 # Specify markdown parser as Maruku is obsolete
 markdown: kramdown
+
+excerpt_separator: "<!-- more -->"
