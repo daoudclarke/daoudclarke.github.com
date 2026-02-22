@@ -104,9 +104,54 @@ def extract_url_facets(text):
     return facets if facets else None
 
 
+def upload_image_to_bluesky(client, image_path, alt_text=""):
+    """
+    Upload image to Bluesky and return embed object.
+    
+    Args:
+        client: Authenticated Bluesky client
+        image_path: Path to image file
+        alt_text: Alt text for accessibility
+    
+    Returns:
+        dict: Embed object for use in post
+    """
+    with open(image_path, 'rb') as f:
+        image_data = f.read()
+    
+    # Upload blob
+    blob = client.upload_blob(image_data)
+    
+    # Create embed object
+    embed = {
+        "$type": "app.bsky.embed.images",
+        "images": [{
+            "alt": alt_text,
+            "image": blob.blob
+        }]
+    }
+    
+    return embed
+
+
 def post_thread_to_bluesky(client, posts, metadata):
-    """Post thread to Bluesky with proper reply chains and clickable links."""
+    """Post thread to Bluesky with proper reply chains, clickable links, and image on first post."""
     print(f"Posting thread ({len(posts)} posts)...")
+    
+    # Check for image metadata and upload if present
+    image_embed = None
+    if 'image_path' in metadata:
+        try:
+            print(f"  Uploading image: {metadata['image_path']}")
+            image_embed = upload_image_to_bluesky(
+                client,
+                metadata['image_path'],
+                metadata.get('image_alt', '')
+            )
+            print(f"  ✓ Image uploaded successfully")
+        except Exception as e:
+            print(f"  ⚠️  Warning: Failed to upload image: {e}")
+            print(f"  Continuing without image...")
     
     posted_refs = []
     
@@ -116,11 +161,12 @@ def post_thread_to_bluesky(client, posts, metadata):
             facets = extract_url_facets(post_text)
             
             if i == 1:
-                # First post - no parent
-                if facets:
-                    response = client.send_post(text=post_text, facets=facets)
-                else:
-                    response = client.send_post(text=post_text)
+                # First post - add image if available
+                response = client.send_post(
+                    text=post_text,
+                    facets=facets,
+                    embed=image_embed  # Only on first post
+                )
             else:
                 # Reply to previous post
                 parent_ref = {
@@ -134,23 +180,14 @@ def post_thread_to_bluesky(client, posts, metadata):
                     'cid': posted_refs[0]['cid']
                 }
                 
-                if facets:
-                    response = client.send_post(
-                        text=post_text,
-                        facets=facets,
-                        reply_to={
-                            'root': root_ref,
-                            'parent': parent_ref
-                        }
-                    )
-                else:
-                    response = client.send_post(
-                        text=post_text,
-                        reply_to={
-                            'root': root_ref,
-                            'parent': parent_ref
-                        }
-                    )
+                response = client.send_post(
+                    text=post_text,
+                    facets=facets,
+                    reply_to={
+                        'root': root_ref,
+                        'parent': parent_ref
+                    }
+                )
             
             # Store reference for next post
             posted_refs.append({

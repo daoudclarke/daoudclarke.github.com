@@ -48,6 +48,51 @@ def parse_blog_post(filepath):
     }
 
 
+def extract_image_from_post(frontmatter, body):
+    """
+    Extract primary image from blog post.
+    
+    Priority order:
+    1. Frontmatter 'image' field
+    2. First markdown image in body
+    
+    Returns:
+        dict with 'path' and 'alt' keys, or None if no image found
+    """
+    # Priority 1: Frontmatter image field
+    if 'image' in frontmatter:
+        image_url = frontmatter['image']
+        # Convert URL to local path
+        # https://daoudclarke.net/img/file.jpg -> img/file.jpg
+        if 'daoudclarke.net' in image_url:
+            image_path = image_url.split('daoudclarke.net/')[-1]
+        else:
+            image_path = image_url.lstrip('/')
+        
+        # Use title as alt text if available
+        alt_text = frontmatter.get('title', '')
+        return {'path': image_path, 'alt': alt_text}
+        
+    # Priority 2: First markdown image in body
+    pattern = r'!\[(.*?)\]\((.*?)\)'
+    match = re.search(pattern, body)
+    if match:
+        alt_text = match.group(1)
+        image_path = match.group(2)
+        
+        # Handle Jekyll liquid tags: {{"/img/file.jpg"}}
+        liquid_match = re.search(r'\{\{["\'](.*?)["\']\}\}', image_path)
+        if liquid_match:
+            image_path = liquid_match.group(1)
+        
+        # Clean path
+        image_path = image_path.lstrip('/')
+        
+        return {'path': image_path, 'alt': alt_text}
+        
+    return None  # No image found
+
+
 def construct_blog_url(filename, base_url="https://daoudclarke.net"):
     """Construct blog post URL from filename using Jekyll permalink structure."""
     # Extract date and title from filename: YYYY-MM-DD-title.md
@@ -74,7 +119,8 @@ Content: {content}
 URL: {url}
 
 Requirements:
-- Use only the original text plus a thread number indicator: e.g. 1/6
+- Use only the original text plus a thread number indicator at the end: e.g. 1/6
+- Include any link URLs within the text as plain text
 - Shorten sentences if necessary but DO NOT add any words
 - Each post MUST be 280 characters or less
 - The last post should include the text: "Original article at: " URL
@@ -173,11 +219,19 @@ def create_thread_markdown(posts, metadata):
         f"blog_url: {metadata['blog_url']}",
         f"generated_at: {metadata['generated_at']}",
         f"status: draft",
+    ]
+    
+    # Add image metadata if present
+    if 'image_path' in metadata:
+        lines.append(f"image_path: {metadata['image_path']}")
+        lines.append(f"image_alt: {metadata['image_alt']}")
+    
+    lines.extend([
         "---",
         "",
         f"# Thread: {metadata['title']}",
         ""
-    ]
+    ])
     
     for i, post in enumerate(posts, 1):
         char_count = len(post)
@@ -217,8 +271,8 @@ def main():
     )
     parser.add_argument(
         "--posts-dir",
-        default="_posts",
-        help="Directory containing blog posts (default: _posts)"
+        default=".",
+        help="Directory containing blog posts (default: .)"
     )
     parser.add_argument(
         "--threads-dir",
@@ -259,6 +313,12 @@ def main():
     
     print(f"Title: {title}")
     print(f"URL: {blog_url}")
+    
+    # Extract image if present
+    image_data = extract_image_from_post(post_data['frontmatter'], post_data['body'])
+    if image_data:
+        print(f"Image found: {image_data['path']}")
+    
     print("\nGenerating thread with Claude API...")
     
     # Generate thread
@@ -276,6 +336,11 @@ def main():
         'title': title,
         'generated_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
     }
+    
+    # Add image metadata if present
+    if image_data:
+        metadata['image_path'] = image_data['path']
+        metadata['image_alt'] = image_data['alt']
     
     # Format as markdown
     thread_markdown = create_thread_markdown(posts, metadata)

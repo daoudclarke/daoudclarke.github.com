@@ -22,7 +22,7 @@ LLMs.
 
 My point is that it shouldn't be necessary to repeat the prompt or
 waste tokens on reasoning to get this performance boost. A similar
-boost could be achieved by removing the causality restriction for _for
+boost could be achieved by removing the causality restriction _for
 prompts_. For example, during pre-training the first half of the
 context could be allowed to attend to any token within that range,
 while we try and predict the second half.
