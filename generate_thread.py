@@ -68,25 +68,19 @@ def generate_thread_with_claude(title, content, url, api_key):
     """Use Claude API to generate a 5-post Bluesky thread."""
     client = Anthropic(api_key=api_key)
     
-    prompt = f"""Given this blog post, create a 5-post Bluesky thread that will engage readers and drive traffic to the full article.
+    prompt = f"""Please split this blog post up into parts for posting as a thread on social media, each with a maximum of 280 chars.
 
-Title: {title}
 Content: {content}
 URL: {url}
 
 Requirements:
-- Post 1 (Hook): Create an engaging opening (max 280 chars) that explains why readers should care.
-- Posts 2-4 (Key Points): Extract 3 key takeaways or insights (max 280 chars each). Each should be self-contained but flow naturally in the thread.
-- Post 5 (Link): A call-to-action (max 280 chars) that encourages reading the full article. Include the URL at the end.
-
-Important:
+- Use only the original text plus a thread number indicator: e.g. 1/6
+- Shorten sentences if necessary but DO NOT add any words
 - Each post MUST be 280 characters or less
-- Make the thread suitable for the research community on Bluesky
-- Ensure smooth flow between posts
-- The last post should include the URL
+- The last post should include the text: "Original article at: " URL
 
 Return ONLY a JSON array with exactly 5 strings, nothing else. Example format:
-["Post 1 text here", "Post 2 text here", "Post 3 text here", "Post 4 text here", "Post 5 text with {url}"]"""
+["Part 1 text here", "Part 2 text here", "Part 3 text here", "Part 4 text here", ..."]"""
 
     try:
         message = client.messages.create(
