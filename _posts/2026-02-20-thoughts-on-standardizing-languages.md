@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "Thoughts on Standardizing Programming Languages"
+image: "https://daoudclarke.net/img/c-plus-plus-jail.webp"
 tags: []
 ---
 {% include JB/setup %}
+
+![Egg head in C++ Jail](/img/c-plus-plus-jail.webp)
 
 I've worked at a few places where there is a "standard" language. From
 an organisational perspective, this makes a lot of sense: if everyone
