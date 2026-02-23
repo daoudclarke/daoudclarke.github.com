@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Comic Strip - 18th February 2026"
+image: "/img/mo-cat.webp"
 description: ""
 tags: []
 ---
