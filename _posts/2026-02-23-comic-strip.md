@@ -2,7 +2,7 @@
 layout: post
 title: "Comic Strip - 23rd February 2026"
 image: "/img/mo-keepy-uppies.webp"
-description: ""
+description: "Comic strip of a boy playing keepy uppies with cat attack"
 tags: []
 ---
 {% include JB/setup %}
