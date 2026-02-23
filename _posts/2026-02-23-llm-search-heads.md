@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Repeating Prompts"
+title: "Making LLMs More Efficient With Search Heads"
 image: "/img/search-loss.png"
 tags: []
 ---
