@@ -52,9 +52,6 @@ def parse_thread_markdown(filepath):
         if post_text:
             posts.append(post_text)
     
-    if len(posts) != 5:
-        raise ValueError(f"Expected 5 posts, found {len(posts)}")
-    
     return {
         'metadata': metadata,
         'posts': posts

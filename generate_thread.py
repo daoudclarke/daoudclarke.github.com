@@ -124,9 +124,10 @@ Requirements:
 - Shorten sentences if necessary but DO NOT add any words
 - Each post MUST be 280 characters or less
 - The last post should include the text: "Original article at: " URL
+- Please strip markdown formatting but leave quotes and URLs
 
-Return ONLY a JSON array with exactly 5 strings, nothing else. Example format:
-["Part 1 text here", "Part 2 text here", "Part 3 text here", "Part 4 text here", ..."]"""
+Return ONLY a JSON array of strings, nothing else. Example format:
+["Part 1 text here", "Part 2 text here", "Part 3 text here", "Part 4 text here", ...]"""
 
     try:
         message = client.messages.create(
@@ -142,15 +143,13 @@ Return ONLY a JSON array with exactly 5 strings, nothing else. Example format:
         # Parse JSON response
         posts = json.loads(response_text)
         
-        if not isinstance(posts, list) or len(posts) != 5:
-            raise ValueError(f"Expected 5 posts, got {len(posts) if isinstance(posts, list) else 'invalid format'}")
+        if not isinstance(posts, list):
+            raise ValueError("Invalid format")
         
         # Validate character limits
         for i, post in enumerate(posts, 1):
             if len(post) > 280:
-                print(f"Warning: Post {i} exceeds 280 characters ({len(post)} chars). Attempting to regenerate...")
-                # Try one more time with emphasis on character limit
-                return generate_thread_with_claude_strict(title, content, url, api_key, posts)
+                raise ValueError("Post exceeds 280 chars")
         
         return posts
     
@@ -161,54 +160,6 @@ Return ONLY a JSON array with exactly 5 strings, nothing else. Example format:
     except Exception as e:
         print(f"Error calling Claude API: {e}")
         sys.exit(1)
-
-
-def generate_thread_with_claude_strict(title, content, url, api_key, previous_posts):
-    """Retry generation with stricter character limit enforcement."""
-    client = Anthropic(api_key=api_key)
-    
-    prompt = f"""The previous thread generation had posts that were too long. Please regenerate with STRICT character limits.
-
-Title: {title}
-Content: {content}
-URL: {url}
-
-Previous attempt (some posts too long):
-{json.dumps(previous_posts, indent=2)}
-
-Requirements:
-- Post 1 (Hook): Engaging opening - MAXIMUM 280 characters
-- Posts 2-4 (Key Points): 3 key takeaways - MAXIMUM 280 characters EACH
-- Post 5 (Link): Call-to-action with URL - MAXIMUM 280 characters
-
-CRITICAL: Every single post must be 280 characters or less. Count carefully!
-
-Return ONLY a JSON array with exactly 5 strings."""
-
-    try:
-        message = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=1024,
-            messages=[
-                {"role": "user", "content": prompt}
-            ]
-        )
-        
-        response_text = message.content[0].text.strip()
-        posts = json.loads(response_text)
-        
-        # Final validation
-        for i, post in enumerate(posts, 1):
-            if len(post) > 280:
-                print(f"Error: Post {i} still exceeds 280 characters ({len(post)} chars) after retry.")
-                print(f"Post content: {post}")
-                print("\nPlease manually edit the generated thread file to fix character limits.")
-        
-        return posts
-    
-    except Exception as e:
-        print(f"Error in retry: {e}")
-        return previous_posts  # Return original even if too long, user can edit
 
 
 def create_thread_markdown(posts, metadata):
@@ -266,13 +217,8 @@ def main():
         description="Generate Bluesky thread from blog post using Claude API"
     )
     parser.add_argument(
-        "post_filename",
-        help="Blog post filename (e.g., 2026-02-20-thoughts-on-standardizing-languages.md)"
-    )
-    parser.add_argument(
-        "--posts-dir",
-        default=".",
-        help="Directory containing blog posts (default: .)"
+        "post_path",
+        help="Blog post path (e.g., _posts/2026-02-20-thoughts-on-standardizing-languages.md)"
     )
     parser.add_argument(
         "--threads-dir",
@@ -293,7 +239,7 @@ def main():
     
     # Parse blog post
     print("Parsing blog post...")
-    post_path = Path(args.posts_dir) / args.post_filename
+    post_path = Path(args.post_path)
     
     try:
         post_data = parse_blog_post(post_path)
@@ -303,7 +249,7 @@ def main():
     
     # Construct URL
     try:
-        blog_url = construct_blog_url(args.post_filename)
+        blog_url = construct_blog_url(post_path.name)
     except Exception as e:
         print(f"Error constructing URL: {e}")
         sys.exit(1)
@@ -331,7 +277,7 @@ def main():
     
     # Create metadata
     metadata = {
-        'source_post': args.post_filename,
+        'source_post': post_path.name,
         'blog_url': blog_url,
         'title': title,
         'generated_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
@@ -346,8 +292,7 @@ def main():
     thread_markdown = create_thread_markdown(posts, metadata)
     
     # Save to file
-    output_filename = args.post_filename  # Keep same filename
-    output_path = Path(args.threads_dir) / output_filename
+    output_path = Path(args.threads_dir) / post_path.name
     save_thread(thread_markdown, output_path)
     
     print(f"\nReview and edit the thread, then post with:")
