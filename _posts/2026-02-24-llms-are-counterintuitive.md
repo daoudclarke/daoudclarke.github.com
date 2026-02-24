@@ -18,7 +18,9 @@ instruction and the LLM got it wrong.
 
 In retrospect, that kind of makes sense, but it doesn't coincide with
 my intuition about how to use these tools. I would have naively
-thought that you could just tell it how you want it to do a task.
+thought that you could just tell it how you want it to do a task. And
+clearly I am not the only one, as evidenced by the results of the
+study.
 
 I was similarly surprised by an experiment I ran at work recently
 estimating properties of surveys. I would have thought that the
