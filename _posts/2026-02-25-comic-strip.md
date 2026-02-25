@@ -7,6 +7,4 @@ tags: []
 ---
 {% include JB/setup %}
 
-![A girl is eating a sandwich. Boy: "Erm... is that a cheese sandwich?
-That's haram!". Girl: "What? No it's not! You know what's haram?
-Making things up!" She throws her book and it lands on his head](/img/sakina-sandwich.webp)
+![A girl is eating a sandwich. Boy: "Erm... is that a cheese sandwich? That's haram!". Girl: "What? No it's not! You know what's haram? Making things up!" She throws her book and it lands on his head](/img/sakina-sandwich.webp)
