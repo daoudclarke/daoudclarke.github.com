@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "LLMs are Counterintuitive"
-image: "/img/search-loss.png"
 tags: []
 ---
 {% include JB/setup %}
